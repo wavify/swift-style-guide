@@ -8,18 +8,14 @@ rough priority order):
  1. Reduced verbosity
  1. Fewer debates about aesthetics
 
-If you have suggestions, please see our [contribution guidelines](CONTRIBUTING.md),
-then open a pull request. :zap:
-
 ----
 
 #### Whitespace
 
- * Tabs, not spaces.
+ * 2 Spaces, not tabs.
  * End files with a newline.
  * Make liberal use of vertical whitespace to divide code into logical chunks.
  * Don’t leave trailing whitespace.
-   * Not even leading indentation on blank lines.
 
 
 #### Prefer `let`-bindings over `var`-bindings wherever possible
@@ -280,8 +276,73 @@ func <|< <A>(lhs: A, rhs: A) -> A
 
 _Rationale:_ Operators consist of punctuation characters, which can make them difficult to read when immediately followed by the punctuation for a type or value parameter list. Adding whitespace separates the two more clearly.
 
-#### Translations
+#### Prefer Functional style over Imperative style
 
-* [中文版](https://github.com/Artwalk/swift-style-guide/blob/master/README_CN.md)
-* [日本語版](https://github.com/jarinosuke/swift-style-guide/blob/master/README_JP.md)
-* [한국어판](https://github.com/minsOne/swift-style-guide/blob/master/README_KR.md)
+Use function style/functions when working with data/collection.
+Instead of:
+
+```swift
+var temp = [String]()
+for person in persons {
+  if person.name.hasPrefix("A") {
+    temp.append(person.name)
+  }
+}
+
+let names = temp
+```
+
+write:
+
+```swift
+let personNames = persons.filter({$0.name.hasPrefix("A") })
+  .map({ $0.name })
+```
+
+_Rationale:_ Functional style is better in term of separation of concern. Your code will be a lot easier to read when use it.
+
+
+#### Prefer `for-in` loop to forEach function when the code introducing the side effects
+
+In case of the code can cause some side effects (eg. update cached data with the new data), we prefer `for-in` loop over functional style `forEach` function
+
+Instead of:
+```swift
+updatedData.forEach({
+  cached.updateWithData($0)
+})
+```
+
+write:
+
+```swift
+for data in updatedData {
+  cached.updateWithData(data)
+}
+```
+
+for the otherwise, use forEach function:
+
+```swift
+persons.forEach(print)
+```
+
+_Rational:_ This make our code be more explicit on the side-effects and make our code more easier to reasoning.
+
+#### Use `guard` for early exit pattern
+
+Use `guard` statement when checking the precondition and doing an early exit
+
+write:
+
+```swift
+let dataLength = data?.length ?? 0
+guard let dataLength = data?.length where dataLength > 0 else {
+  return nil
+}
+```
+
+_Rationale:_ Early exit pattern and `guard` statement make our code more readable
+
+
+
