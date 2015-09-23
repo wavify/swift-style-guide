@@ -2,7 +2,7 @@
 ID: 5185
 post_title: Certificate
 author: chutima
-post_date: 2015-09-23 16:48:37
+post_date: 2015-09-23 16:48:54
 post_excerpt: ""
 layout: post
 permalink: http://192.168.178.12/?p=5185
@@ -35,7 +35,7 @@ Certificate List
 	<li>เมื่อขอแล้วจะได้ cert และ CA มา</li>
 	<li>upload cert &amp; CA ที่ได้มาที่เมนู upload certificate file
 <ul>
-	<li>เมื่อ upload cert ระบบจทำการ validate cert &amp; CA ก่อนการ</li>
+	<li>เมื่อ upload cert ระบบจะทำการ validate cert &amp; CA ด้วย</li>
 </ul>
 </li>
 	<li>เวลาใช้งานจะไม่มีเด้งถามความปลอดภัยอีก</li>
@@ -44,6 +44,7 @@ Certificate List
 	<li>สามารถ regenerate cert ได้
 <ul>
 	<li>Regenerate cert อย่างเดียว ระบบจะ auto apply ไปเลย</li>
+	<li>Regenerate</li>
 </ul>
 </li>
 </ul>
