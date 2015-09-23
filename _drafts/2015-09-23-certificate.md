@@ -2,7 +2,7 @@
 ID: 5185
 post_title: Certificate
 author: chutima
-post_date: 2015-09-23 16:50:26
+post_date: 2015-09-23 16:51:41
 post_excerpt: ""
 layout: post
 permalink: http://192.168.178.12/?p=5185
@@ -28,7 +28,7 @@ Certificate List
 <ol>
 	<li>สร้าง Self-sign cert
 <ul>
-	<li>เมื่อทำการสร้างแล้วสามารถ apply cert เพื่อใช้งานได้เลย</li>
+	<li>เมื่อทำการสร้างแล้วจะได้ self-sign cert มา และสามารถ apply cert เพื่อใช้งานได้เลย</li>
 	<li>หากต้องการให้คนอื่น sign cert ให้ (เพราะไม่อยากให้มีเด้งถามความปลอดภัยเวลาใช้งาน) ทำได้ดังนี้
 <ul>
 	<li>นำ csr ที่ได้จาก cert ไปขอ sign กับคนอื่น</li>
@@ -44,7 +44,7 @@ Certificate List
 	<li>สามารถ regenerate cert ได้
 <ul>
 	<li>Regenerate cert อย่างเดียว ระบบจะ auto apply ไปเลย</li>
-	<li>Regenerate key, csr และ cert ระบบจะ auto apply ไป แต่จะส่งผลให้กลายเป็น</li>
+	<li>Regenerate key, csr และ cert ระบบจะ auto apply ไป แต่จะส่งผลให้กลายเป็น self-sign ด้วย</li>
 </ul>
 </li>
 </ul>
