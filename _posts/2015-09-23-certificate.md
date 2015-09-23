@@ -13,7 +13,7 @@ Certificate ที่ใช้งานอยู่ในปัจจุบั�
 	<li>Self-sign certificate
 <ul>
 	<li>ในกรณีที่เราไม่ได้ไปขอ cert จากภายนอกมาใส่ เราจะสร้างและ sign cert แล้วใช้งานเอง</li>
-	<li>ถ้าใช้งานจะเด้งถามยืนยันความปลอดภัย</li>
+	<li>เมื่อใช้งาน browser จะเด้งถามยืนยันความปลอดภัย</li>
 	<li><a href="http://192.168.178.12/wp-content/uploads/2015/09/Screen-Shot-2558-09-23-at-4.52.08-PM.png"><img class="alignnone size-full wp-image-5189" src="http://192.168.178.12/wp-content/uploads/2015/09/Screen-Shot-2558-09-23-at-4.52.08-PM.png" alt="Screen Shot 2558-09-23 at 4.52.08 PM" width="86" height="47" /></a><a href="http://192.168.178.12/wp-content/uploads/2015/09/Screen-Shot-2558-09-23-at-4.30.52-PM.png"><img class="alignnone size-full wp-image-5186" src="http://192.168.178.12/wp-content/uploads/2015/09/Screen-Shot-2558-09-23-at-4.30.52-PM.png" alt="Screen Shot 2558-09-23 at 4.30.52 PM" width="675" height="506" /></a></li>
 </ul>
 </li>
