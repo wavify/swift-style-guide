@@ -2,7 +2,7 @@
 ID: 5185
 post_title: Certificate
 author: chutima
-post_date: 2015-09-23 16:54:05
+post_date: 2015-09-23 16:55:23
 post_excerpt: ""
 layout: post
 permalink: http://192.168.178.12/?p=5185
@@ -51,7 +51,7 @@ Certificate List
 	<li>Regenerate cert อย่างเดียว ระบบจะ auto apply ไปเลย</li>
 	<li>Regenerate key, csr และ cert ระบบจะ auto apply ไป แต่จะส่งผลให้กลายเป็น self-sign ด้วย
 <ul>
-	<li>จำเป็นต้</li>
+	<li>จำเป็นต้องเอา csr ไปขอ cert ใหม่ เพราะ key เปลี่ยน</li>
 </ul>
 </li>
 </ul>
@@ -66,7 +66,7 @@ Certificate List
 	<li>Add cert by text</li>
 </ul>
 </li>
-	<li>Cert ที่นำเข้าจากภายนอกนี้จะไม่</li>
+	<li>Cert ที่นำเข้าจากภายนอกนี้จะไม่สามารถ regenerate cert ได้</li>
 </ul>
 </li>
 </ol>
