@@ -2,7 +2,7 @@
 ID: 5185
 post_title: Certificate
 author: chutima
-post_date: 2015-09-23 16:55:23
+post_date: 2015-09-23 16:59:24
 post_excerpt: ""
 layout: post
 permalink: http://192.168.178.12/?p=5185
@@ -67,6 +67,7 @@ Certificate List
 </ul>
 </li>
 	<li>Cert ที่นำเข้าจากภายนอกนี้จะไม่สามารถ regenerate cert ได้</li>
+	<li>ฉำ</li>
 </ul>
 </li>
 </ol>
