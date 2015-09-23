@@ -2,7 +2,7 @@
 ID: 5185
 post_title: Certificate
 author: chutima
-post_date: 2015-09-23 16:44:12
+post_date: 2015-09-23 16:45:33
 post_excerpt: ""
 layout: post
 permalink: http://192.168.178.12/?p=5185
@@ -37,12 +37,18 @@ Certificate List
 	<li>เวลาใช้งานจะไม่มีเด้งถามความปลอดภัยอีก</li>
 </ul>
 </li>
+	<li>สามารถ</li>
 </ul>
 </li>
 	<li>นำเข้า Cert จากภายนอก
 <ul>
+	<li>สามารถทำได้สองทางคือ
+<ul>
 	<li>Import cert file</li>
 	<li>Add cert by text</li>
+</ul>
+</li>
+	<li>Cert ที่นำเข้าจากภายนอกนี้จะไม่</li>
 </ul>
 </li>
 </ol>
