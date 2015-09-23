@@ -2,7 +2,7 @@
 ID: 5185
 post_title: Certificate
 author: chutima
-post_date: 2015-09-23 16:53:40
+post_date: 2015-09-23 16:54:05
 post_excerpt: ""
 layout: post
 permalink: http://192.168.178.12/?p=5185
@@ -14,7 +14,7 @@ Certificate ที่ใช้งานอยู่ในปัจจุบั�
 <ul>
 	<li>ในกรณีที่เราไม่ได้ไปขอ cert จากภายนอกมาใส่ เราจะสร้างและ sign cert แล้วใช้งานเอง</li>
 	<li>ถ้าใช้งานจะเด้งถามยืนยันความปลอดภัย</li>
-	<li><a href="http://192.168.178.12/wp-content/uploads/2015/09/Screen-Shot-2558-09-23-at-4.30.52-PM.png"><img class="alignnone size-full wp-image-5186" src="http://192.168.178.12/wp-content/uploads/2015/09/Screen-Shot-2558-09-23-at-4.30.52-PM.png" alt="Screen Shot 2558-09-23 at 4.30.52 PM" width="675" height="506" /></a></li>
+	<li><a href="http://192.168.178.12/wp-content/uploads/2015/09/Screen-Shot-2558-09-23-at-4.52.08-PM.png"><img class="alignnone size-full wp-image-5189" src="http://192.168.178.12/wp-content/uploads/2015/09/Screen-Shot-2558-09-23-at-4.52.08-PM.png" alt="Screen Shot 2558-09-23 at 4.52.08 PM" width="86" height="47" /></a><a href="http://192.168.178.12/wp-content/uploads/2015/09/Screen-Shot-2558-09-23-at-4.30.52-PM.png"><img class="alignnone size-full wp-image-5186" src="http://192.168.178.12/wp-content/uploads/2015/09/Screen-Shot-2558-09-23-at-4.30.52-PM.png" alt="Screen Shot 2558-09-23 at 4.30.52 PM" width="675" height="506" /></a></li>
 </ul>
 </li>
 	<li>Certificate แบบคนอื่น sign
@@ -49,7 +49,11 @@ Certificate List
 	<li>สามารถ regenerate cert ได้
 <ul>
 	<li>Regenerate cert อย่างเดียว ระบบจะ auto apply ไปเลย</li>
-	<li>Regenerate key, csr และ cert ระบบจะ auto apply ไป แต่จะส่งผลให้กลายเป็น self-sign ด้วย</li>
+	<li>Regenerate key, csr และ cert ระบบจะ auto apply ไป แต่จะส่งผลให้กลายเป็น self-sign ด้วย
+<ul>
+	<li>จำเป็นต้</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
