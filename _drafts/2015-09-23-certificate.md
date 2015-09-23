@@ -2,7 +2,7 @@
 ID: 5185
 post_title: Certificate
 author: chutima
-post_date: 2015-09-23 16:39:52
+post_date: 2015-09-23 16:41:08
 post_excerpt: ""
 layout: post
 permalink: http://192.168.178.12/?p=5185
@@ -28,8 +28,12 @@ Certificate List
 <ol>
 	<li>สร้าง Self-sign cert
 <ul>
-	<li>เมื่อทำการสร้าง self-sign cert แล้วสามารถ apply cert เพื่อใช้งานได้เลย (โดยปกติ cert ที่สร้างขึ้นด้วยวิธีนี้จะ</li>
-	<li>หากต้องการให้คนอื่น sign cert ให้ สามารถ</li>
+	<li>เมื่อทำการสร้างแล้วสามารถ apply cert เพื่อใช้งานได้เลย</li>
+	<li>หากต้องการให้คนอื่น sign cert ให้ สามารถนำ csr ที่ได้จาก cert ไปขอ sign กับคนอื่นได้
+<ul>
+	<li>เมื่อขอแล้วจะได้ cert และ CA ม</li>
+</ul>
+</li>
 </ul>
 </li>
 	<li>นำเข้า Cert จากภายนอก
