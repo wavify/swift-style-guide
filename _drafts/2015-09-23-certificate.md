@@ -2,7 +2,7 @@
 ID: 5185
 post_title: Certificate
 author: chutima
-post_date: 2015-09-23 16:51:41
+post_date: 2015-09-23 16:52:05
 post_excerpt: ""
 layout: post
 permalink: http://192.168.178.12/?p=5185
@@ -17,7 +17,11 @@ Certificate ที่ใช้งานอยู่ในปัจจุบั�
 	<li><a href="http://192.168.178.12/wp-content/uploads/2015/09/Screen-Shot-2558-09-23-at-4.30.52-PM.png"><img class="alignnone size-full wp-image-5186" src="http://192.168.178.12/wp-content/uploads/2015/09/Screen-Shot-2558-09-23-at-4.30.52-PM.png" alt="Screen Shot 2558-09-23 at 4.30.52 PM" width="675" height="506" /></a></li>
 </ul>
 </li>
-	<li>Certificate แบบคนอื่น sign</li>
+	<li>Certificate แบบคนอื่น sign
+<ul>
+	<li>ไม่มีเด้งถามความปลอดภัย ถ้าเข้าเวปจะเป็นสีเขียวสวยๆ</li>
+</ul>
+</li>
 </ol>
 
 <hr />
