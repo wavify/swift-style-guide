@@ -2,7 +2,7 @@
 ID: 5185
 post_title: Certificate
 author: chutima
-post_date: 2015-09-23 16:48:54
+post_date: 2015-09-23 16:50:10
 post_excerpt: ""
 layout: post
 permalink: http://192.168.178.12/?p=5185
@@ -44,7 +44,7 @@ Certificate List
 	<li>สามารถ regenerate cert ได้
 <ul>
 	<li>Regenerate cert อย่างเดียว ระบบจะ auto apply ไปเลย</li>
-	<li>Regenerate</li>
+	<li>Regenerate key, csr และ cert</li>
 </ul>
 </li>
 </ul>
