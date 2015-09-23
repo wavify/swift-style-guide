@@ -2,7 +2,7 @@
 ID: 5185
 post_title: Certificate
 author: chutima
-post_date: 2015-09-23 16:38:12
+post_date: 2015-09-23 16:39:37
 post_excerpt: ""
 layout: post
 permalink: http://192.168.178.12/?p=5185
@@ -28,7 +28,8 @@ Certificate List
 <ol>
 	<li>สร้าง Self-sign cert
 <ul>
-	<li>เมื่อทำการสร้าง</li>
+	<li>เมื่อทำการสร้าง self-sign cert แล้วสามารถ apply cert เพื่อใช้งานได้เลย</li>
+	<li>หากต้องการให้คนอื่น sign cert ให้ สามร</li>
 </ul>
 </li>
 	<li>นำเข้า Cert จากภายนอก
