@@ -2,7 +2,7 @@
 ID: 5185
 post_title: Certificate
 author: chutima
-post_date: 2015-09-23 16:42:40
+post_date: 2015-09-23 16:43:55
 post_excerpt: ""
 layout: post
 permalink: http://192.168.178.12/?p=5185
@@ -34,6 +34,7 @@ Certificate List
 	<li>นำ csr ที่ได้จาก cert ไปขอ sign กับคนอื่น</li>
 	<li>เมื่อขอแล้วจะได้ cert และ CA มา</li>
 	<li>upload cert &amp; CA ที่ได้มาที่เมนู upload certificate file</li>
+	<li>เวลาใช้งานจะไม่มีเด้ห</li>
 </ul>
 </li>
 </ul>
