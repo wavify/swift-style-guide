@@ -11,7 +11,7 @@ published: true
 <strong>Required</strong>
 <ol>
 	<li>Nodejs version &gt; 4.0  (<a href="https://nodejs.org/en/">https://nodejs.org/en/</a>)</li>
-	<li>pig-config, cmake, hiredis (install by home-brew (<a href="http://brew.sh">http://brew.sh</a>))</li>
+	<li>pkg-config, cmake, hiredis (install by home-brew (<a href="http://brew.sh">http://brew.sh</a>))</li>
 	<li>ZMQ (<a href="http://zeromq.org">http://zeromq.org</a> or install by home-brew)</li>
 </ol>
 <strong>Installation</strong>
