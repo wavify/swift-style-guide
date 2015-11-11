@@ -45,6 +45,17 @@ start server
 stop server
     ./web-server.sh stop 0</pre>
 </li>
+	<li>Start authen module
+<pre>cd chat/datamodel/transportlayer/authentication
+start server
+    ./script.sh start 0
+stop server
+    ./script.sh stop 0
+add mock-up user
+    ./script.sh adduser 0
+remove all user
+    ./script.sh removeuser 0</pre>
+</li>
 </ol>
 <strong>How to access log</strong>
 <ul>
@@ -52,4 +63,11 @@ stop server
 	<li>hwserver log &gt;&gt; chat/webserver/log/server.log</li>
 	<li>node log &gt;&gt; chat/webserver/log/node.log</li>
 </ul>
-&nbsp;
+<strong>GUI for ldap</strong>
+<ul>
+	<li>download <a href="https://directory.apache.org/apacheds/download/download-macosx.html">Apache Directory Studio</a> and Install then launch</li>
+	<li>File -&gt; new -&gt; LDAP Browser -&gt; LDAP Connection</li>
+	<li>Hostname: <span style="text-decoration: underline;">localhost</span> -&gt; next</li>
+	<li>Bind DN or user: <span style="text-decoration: underline;">cn=admin,dc=authen</span></li>
+	<li>Bind password: <span style="text-decoration: underline;">secret</span> -&gt; Finish</li>
+</ul>
