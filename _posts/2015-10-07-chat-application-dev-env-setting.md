@@ -12,71 +12,44 @@ published: true
 <ol>
 	<li>Nodejs version &gt; 4.0  (<a href="https://nodejs.org/en/">https://nodejs.org/en/</a>)</li>
 	<li>pkg-config, cmake, hiredis (install by home-brew (<a href="http://brew.sh">http://brew.sh</a>))</li>
-	<li>ZMQ (<a href="http://zeromq.org">http://zeromq.org</a> or install by home-brew)</li>
+	<li>ZMQ version &gt; 4.1.3 (<a href="http://zeromq.org">http://zeromq.org</a> or install by home-brew)</li>
+	<li>openldap and berkeley-db (installation guide in <a href="http://192.168.178.12/?p=4869">http://192.168.178.12/?p=4869</a>)</li>
 </ol>
 <strong>Installation</strong>
 <ol>
-	<li>Clone project from <a href="http://192.168.178.10/git/chat">http://192.168.178.10/git/chat</a></li>
-	<li>Switch branch to 'web'</li>
-	<li>Run command under /chat
-<ul>
-	<li>
-<pre>npm install</pre>
+	<li>Clone project from http://192.168.178.10/git/chat
+*If you use git command line, you need to use
+<pre>git submodule update --init --recursive</pre>
 </li>
-</ul>
-</li>
-	<li>Go to chat/transportlayer and run
-<ul>
-	<li>
-<pre>mkdir build
-cd build
-cmake ..
-make install</pre>
-</li>
-</ul>
-</li>
-	<li>Go to chat/webserver and run
-<ul>
-	<li>
-<pre>make</pre>
-</li>
-</ul>
+	<li>Switch branch to 'web-0.1.0-dev'</li>
+	<li>Build chat project in /chat
+<pre>npm install
+
+./build.sh</pre>
 </li>
 </ol>
 <strong>Run Chat</strong>
 <ol>
-	<li>Start router</li>
+	<li>Start router
+<pre>cd chat/datamodel/transportlayer
+
+start router
+    ./transport.sh router 0 start
+stop router
+    ./transport.sh router 0 start</pre>
+</li>
+	<li>Start node &amp; hwserver
+<pre>cd chat
+start server
+    ./web-server.sh start 0
+stop server
+    ./web-server.sh stop 0</pre>
+</li>
 </ol>
-<pre>cd chat/transportlayer/build
-./router_client.o
-
-Select Router or Client 
-1: Router
-2: Client
-3: Shadow
-0: Exit
-&gt; 1 
-
-Select Router or Client 
-1: Router
-2: Client
-3: Shadow
-0: Exit
-&gt; config/router0.conf
-</pre>
-2. Start node &amp; hwserver
-<pre>cd chat</pre>
-<pre>start server
- ./web-server.sh start 0</pre>
-<pre>stop server
- ./web-server.sh stop 0</pre>
+<strong>How to access log</strong>
+<ul>
+	<li>router log &gt;&gt; chat/datamodel/transportlayer/build/log/router.log</li>
+	<li>hwserver log &gt;&gt; chat/webserver/log/server.log</li>
+	<li>node log &gt;&gt; chat/webserver/log/node.log</li>
+</ul>
 &nbsp;
-<ul>
-	<li> How to access log</li>
-</ul>
-<pre>cd chat/webserver/log</pre>
-<ul>
-	<li>node &gt;&gt; node.log</li>
-	<li>hwserver &gt;&gt; server.log</li>
-	<li>hwserver error &gt;&gt; error.log</li>
-</ul>
