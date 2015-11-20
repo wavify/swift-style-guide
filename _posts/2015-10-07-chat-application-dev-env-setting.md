@@ -23,45 +23,21 @@ published: true
 </li>
 	<li>Switch branch to 'web-0.1.0-dev'</li>
 	<li>Build chat project in /chat
-<pre>npm install
-
-./build.sh</pre>
+<pre>npm install</pre>
 </li>
 </ol>
 <strong>Run Chat</strong>
 <ol>
-	<li>Start router
-<pre>cd chat/datamodel/transportlayer
-
-start router
-    ./transport.sh router 0 start
-stop router
-    ./transport.sh router 0 start</pre>
-</li>
-	<li>Start node &amp; hwserver
-<pre>cd chat
-start server
-    ./web-server.sh start 0
-stop server
-    ./web-server.sh stop 0</pre>
-</li>
-	<li>Start authen module
-<pre>cd chat/datamodel/transportlayer/authentication
-start server
-    ./script.sh start 0
-stop server
-    ./script.sh stop 0
-add mock-up user
-    ./script.sh adduser 0
-remove all user
-    ./script.sh removeuser 0</pre>
+	<li>run chat service
+<pre>cd chat/script
+./reset-all.sh</pre>
 </li>
 </ol>
 <strong>How to access log</strong>
 <ul>
-	<li>router log &gt;&gt; chat/datamodel/transportlayer/build/log/router.log</li>
-	<li>hwserver log &gt;&gt; chat/webserver/log/server.log</li>
-	<li>node log &gt;&gt; chat/webserver/log/node.log</li>
+	<li>router log &gt;&gt; /tmp/chat_log/router.log</li>
+	<li>hwserver log &gt;&gt;/tmp/chat_log/server.log</li>
+	<li>node log &gt;&gt;/tmp/chat_log/node.log</li>
 </ul>
 <strong>GUI for ldap</strong>
 <ul>
