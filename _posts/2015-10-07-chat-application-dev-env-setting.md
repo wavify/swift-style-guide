@@ -11,7 +11,7 @@ published: true
 <strong>Required</strong>
 <ol>
 	<li>Nodejs version &gt; 4.0  (<a href="https://nodejs.org/en/">https://nodejs.org/en/</a>)</li>
-	<li>pkg-config, cmake, hiredis (install by home-brew (<a href="http://brew.sh">http://brew.sh</a>))</li>
+	<li>pkg-config, cmake, hiredis, curl, sqlite (install by home-brew (<a href="http://brew.sh">http://brew.sh</a>))</li>
 	<li>ZMQ version &gt; 4.1.3 (<a href="http://zeromq.org">http://zeromq.org</a> or install by home-brew)</li>
 	<li>openldap and berkeley-db (installation guide in <a href="http://192.168.178.12/?p=4869">http://192.168.178.12/?p=4869</a>)</li>
 </ol>
