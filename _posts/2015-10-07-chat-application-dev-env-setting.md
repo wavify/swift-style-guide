@@ -14,6 +14,7 @@ published: true
 	<li>pkg-config, cmake, hiredis, curl, sqlite (install by home-brew (<a href="http://brew.sh">http://brew.sh</a>))</li>
 	<li>ZMQ version &gt; 4.1.3 (<a href="http://zeromq.org">http://zeromq.org</a> or install by home-brew)</li>
 	<li>openldap and berkeley-db (installation guide in <a href="http://192.168.178.12/?p=4869">http://192.168.178.12/?p=4869</a>)</li>
+	<li>Download orient-db (download from here <a href="http://orientdb.com/download.php?email=unknown@unknown.com&amp;file=orientdb-community-2.1.6.tar.gz&amp;os=mac">Orient-db</a>)</li>
 </ol>
 <strong>Installation</strong>
 <ol>
@@ -28,6 +29,11 @@ published: true
 </ol>
 <strong>Run Chat</strong>
 <ol>
+	<li>run orient-db
+<pre>go to orient-db folder
+cd bin
+./server.sh</pre>
+</li>
 	<li>run chat service
 <pre>cd chat/script
 ./reset-all.sh</pre>
@@ -35,6 +41,7 @@ published: true
 </ol>
 <strong>How to access log</strong>
 <ul>
+	<li>friend log &gt;&gt; /tmp/chat_log/friendservice.log</li>
 	<li>router log &gt;&gt; /tmp/chat_log/router.log</li>
 	<li>hwserver log &gt;&gt;/tmp/chat_log/server.log</li>
 	<li>node log &gt;&gt;/tmp/chat_log/node.log</li>
