@@ -26,7 +26,7 @@ published: true
 3. port คือ หมายเลข port ที่จะรัน database instance เมื่อ init เสร็จเรียบร้อย
 4. username คือ username ที่ใช้สร้าง (ต้องใช้ username นี้ ในการเข้าใช้ databasae ในครั้งต่อๆ ไป)</li>
 	<li>cd เข้าไปที่ directory: crossweb/node_modules/feed/bin/initial-script</li>
-	<li>รันคำสั่ง node init_PGDB_and_modify_config.js -c initial-config/(initdb.conf.js | initdb.conf.prod.js)
+	<li>รันคำสั่ง node init_PGDB_and_modify_config.js -c ./initial-config/(initdb.conf.js | initdb.conf.prod.js)
 โดย user ที่สั่งรัน ต้องมี permission ในการ create directory ใน base_dir
 เมื่อรัน script นี้แล้ว จะได้ database 1 instance ที่รันอยู่ที่ port ที่ระบุ</li>
 </ol>
@@ -46,7 +46,7 @@ file: crossweb/node_modules/feed/bin/initial-script/initial-config/(createdb.con
 4. create_history_db
 4.1 doCreate คือ จะสร้าง history database หรือไม่ (history database ควรจะอยู่เฉพาะบน cloud)</li>
 	<li>cd เข้าไปที่ directory: crossweb/node_modules/feed/bin/initial-script</li>
-	<li>รันคำสั่ง node initial-script/create_PGDB_with_BDR_extension.js -c initial-config/(createdb.conf.js | createdb.conf.prod.js)
+	<li>รันคำสั่ง node initial-script/create_PGDB_with_BDR_extension.js -c ./initial-config/(createdb.conf.js | createdb.conf.prod.js)
 เมื่อรัน script นี้แล้ว จะได้ database ที่กำหนด พร้อมกับสร้าง table, index และพยายามจะ sync cloud-local</li>
 </ol>
 <ul>
