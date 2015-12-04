@@ -12,7 +12,20 @@ published: true
 <ol>
 	<li>Nodejs version &gt; 4.0  (<a href="https://nodejs.org/en/">https://nodejs.org/en/</a>)</li>
 	<li>pkg-config, cmake, hiredis, curl, sqlite (install by home-brew (<a href="http://brew.sh">http://brew.sh</a>))</li>
-	<li>ZMQ version &gt; 4.1.3 (<a href="http://zeromq.org">http://zeromq.org</a> or install by home-brew)</li>
+	<li>openssl (download from here <a href="https://www.openssl.org/source/openssl-1.0.2d.tar.gz">www.openssl.org</a>) and install
+<pre>cd openssl-1.0.2d
+./Configure darwin64-x86_64-cc
+make
+make install</pre>
+</li>
+	<li>ZMQ version &gt; 4.0.3 compile with libsodium
+<pre>brew libsodium
+curl -O http://download.zeromq.org/zeromq-4.1.3.tar.gz
+tar -zxvf zeromq-4.1.3.tar.gz
+cd zeromq-4.1.3
+./configure --with-libsodium=/usr/local/
+make &amp;&amp; make install</pre>
+</li>
 	<li>openldap and berkeley-db (installation guide in <a href="http://192.168.178.12/?p=4869">http://192.168.178.12/?p=4869</a>)</li>
 	<li>Download orient-db (download from here <a href="http://orientdb.com/download.php?email=unknown@unknown.com&amp;file=orientdb-community-2.1.6.tar.gz&amp;os=mac">Orient-db</a>)</li>
 </ol>
