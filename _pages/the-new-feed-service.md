@@ -55,3 +55,9 @@ file: crossweb/node_modules/feed/bin/initial-script/initial-config/(createdb.con
 <ol>
 	<li>รัน script ./startAll.sh และ ./startWebService.sh โดยขณะที่รัน ./startAll.sh ห้ามใช้ user root (ห้าม sudo)</li>
 </ol>
+&nbsp;
+<ul>
+	<li>create feed database สำหรับ org แบบ local only
+สำหรับ local only ให้สร้าง postgres database แบบ cloud แทน นั่นคือ ค่า is_cloud_or_local = cloud
+แล้วเมื่อ local only นั้น จะต้องไปต่อกับ cloud ก็ให้สร้าง postgres database ที่ cloud เป็น local แทน (is_cloud_or_local = local) แล้วค่า cloud ก็ให้ระบุที่อยู่ของ feed postgres database ที่ org_name เดียวกัน ของ local only นั้น<span style="font-weight: 300;">   </span></li>
+</ul>
