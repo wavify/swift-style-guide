@@ -23,8 +23,8 @@ make install</pre>
 curl -O http://download.zeromq.org/zeromq-4.1.3.tar.gz
 tar -zxvf zeromq-4.1.3.tar.gz
 cd zeromq-4.1.3
-export sodium_CFLAGS="-I/usr/local/include -L/usr/local/lib"
-export sodium_LIBS="-lsodium"
+export sodium_LIBS="-L/usr/local/lib/ -lsodium"
+export sodium_CFLAGS="-I/usr/local/include"
 ./configure --with-libsodium=/usr/local/
 make &amp;&amp; make install</pre>
 </li>
