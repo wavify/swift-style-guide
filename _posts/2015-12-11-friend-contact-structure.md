@@ -30,4 +30,6 @@ published: true
 	<li>View</li>
 	<li>Collection &amp; Model</li>
 </ul>
+เวลาเรียกใช้ view / model กลางจาก sdk จะสามารถเอามาใช้ได้เลย เพราะโครงสร้างเหมือนกันกับ Todo / Calendar แล้ว ต่างจาก Friend ที่ต้องแก้โค๊ดก่อน ถึงจะทำได้
+
 <img class="alignnone size-full wp-image-5260" src="http://192.168.178.12/wp-content/uploads/2015/12/Friend-Contact-Diagram2.png" alt="Friend &amp; Contact Diagram2" width="821" height="933" />
