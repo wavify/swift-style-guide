@@ -10,7 +10,7 @@ published: true
 ---
 ในระบบของเรา deployment และ organization จะมี mode ต่างๆดังนี้
 <h2>Deployment</h2>
-Deployment จะแบ่งออกเป็น 3 ประเภทคือ
+Deployment จะแบ่งออกเป็น 4 ประเภทคือ
 <ol>
 	<li>Default (mode = 0) จะเป็น cloud deployment หลักของแต่ละระบบ</li>
 	<li>Local (mode = 1) เป็น deployment ที่ผูกกันกับเครื่อง local เครื่องอื่นๆ
@@ -33,6 +33,7 @@ Deployment จะแบ่งออกเป็น 3 ประเภทคือ
 </ol>
 </li>
 	<li>Public cloud (mode = 2) เป็น cloud deployment เช่นเดียวกัน แต่ไม่ใช่ deployment หลัก</li>
+	<li>Stand Alone (mode = 3) เป็น local only คือจะไม่มีการยิงอะไรขึ้นมาบน cloud อีก สร้าง org หรือ set config ที่เครื่องตัวเองได้เลย</li>
 </ol>
 <ul>
 	<li>ในระบบหนึ่งๆจะมี cloud deployment ได้มากกว่าหนึ่ง</li>
