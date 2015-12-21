@@ -51,7 +51,7 @@ cd bin
 </li>
 	<li>run chat service
 <pre>cd chat/script
-./reset-all.sh</pre>
+./rebuild.sh</pre>
 </li>
 </ol>
 <strong>How to access log</strong>
