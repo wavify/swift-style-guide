@@ -14,7 +14,7 @@ published: true
 </ul>
 <ol>
 	<li>รันคำสั่ง curl -s "http://git.postgresql.org/gitweb/?p=2ndquadrant_bdr.git;a=blob_plain;f=scripts/bdr_quickstart.sh;hb=bdr-plugin/REL0_9_STABLE" | bash</li>
-	<li>แก้ไฟล์ $HOME/.profile โดยเพิ่ม export PATH=$HOME/Desktop/testbdr/bdr-program/bin:$PATH</li>
+	<li>แก้ไฟล์ $HOME/.profile โดยเพิ่ม export PATH=$HOME/2ndquadrant_bdr/bdr/bin:$PATH</li>
 </ol>
 <ul>
 	<li>init database instance</li>
