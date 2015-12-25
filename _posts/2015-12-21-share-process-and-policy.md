@@ -8,7 +8,6 @@ layout: post
 permalink: http://192.168.178.12/?p=5292
 published: true
 ---
-<div>
 <div><b>ระบบ Share</b></div>
 <ul>
 	<li>ระบบ share คือระบบที่ผู้ใช้งานสามารถแบ่งปัน item ต่างๆในระบบกับเพื่อนได้ เมื่อมีการเปลี่ยนแปลงเกิดขึ้นกับ item คนที่สามารถเข้าถึง item ได้ จะเห็นการเปลี่ยนแปลงนั้นเหมือนกัน</li>
@@ -98,10 +97,12 @@ published: true
 </li>
 </ul>
 </li>
-	<li>Saving
+	<li>การแก้ไข permission จะต้องหา diff แล้ว save เฉพาะการเปลี่ยนแปลง permission เท่านั้น ห้าม save ทับ</li>
+	<li>Default permission
 <ul>
-	<li>Save diff ONLY</li>
+	<li>เป็น permission เบื้องต้นในการ share</li>
+	<li>ไม่ว่าจะ share ด้วยทางใด เช่นกด share ตรงๆ หรือว่า share ผ่านทางการเซต assignee, ui จะ auto set permission ในการ share เป็น default permission เสมอ ซึ่งถ้า user อยากได้ permission แบบอื่น ก็กดแก้ไขได้</li>
 </ul>
 </li>
 </ul>
-</div>
+<div></div>
