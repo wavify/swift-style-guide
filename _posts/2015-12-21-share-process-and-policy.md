@@ -8,6 +8,7 @@ layout: post
 permalink: http://192.168.178.12/?p=5292
 published: true
 ---
+<div>
 <div><b>ระบบ Share</b></div>
 <ul>
 	<li>ระบบ share คือระบบที่ผู้ใช้งานสามารถแบ่งปัน item ต่างๆในระบบกับเพื่อนได้ เมื่อมีการเปลี่ยนแปลงเกิดขึ้นกับ item คนที่สามารถเข้าถึง item ได้ จะเห็นการเปลี่ยนแปลงนั้นเหมือนกัน</li>
@@ -106,3 +107,24 @@ published: true
 </li>
 </ul>
 <div></div>
+<div><b>File ที่เกี่ยวข้อง</b></div>
+<ul>
+	<li>sharable.js (crossweb/sdk/Web/client/js/models/sharable.js)
+<ul>
+	<li>Item ที่สามารถ share ได้จะ extend ต่อจาก model นี้</li>
+	<li>Method ที่เกี่ยวข้องกับ permission ของ model จะอยู่ใน class นี้</li>
+</ul>
+</li>
+	<li>detail-view.js (crossweb/sdk/Web/client/js/views/modal/detail-view.js)
+<ul>
+	<li>คุม permission ของหน้า item detail view ทั้งของ container model (category/calendar) และของ item model (task/event)</li>
+</ul>
+</li>
+	<li>item-detail-view.js (crossweb/sdk/Web/client/js/views/modal/item-detail-view.js)
+<ul>
+	<li>คุม permission ของหน้า item detail view ทั้งของ item model (task/event)</li>
+</ul>
+</li>
+	<li>นอกจากนี้ยังมีกระจายอยู่ที่จุดอื่นๆอีก เช่นส่วนที่เป็น centre.js (crossweb/todo/client/todo/js/views/center/center.js) ที่ต้องคอย hide/show ปุ่ม add task กรณีที่ category นั้นเป็น read-only เป็นต้น</li>
+</ul>
+</div>
