@@ -8,29 +8,60 @@ layout: post
 permalink: http://192.168.178.12/?p=5292
 published: true
 ---
-<div><b>Share step</b></div>
-<ol>
-	<li>Select target (friend)</li>
-	<li>Set permission (read, edit, share, delete)</li>
-</ol>
+<div>
+<div><b>ระบบ Share</b></div>
+<ul>
+	<li>ระบบ share คือระบบที่ผู้ใช้งานสามารถแบ่งปัน item ต่างๆในระบบกับเพื่อนได้ เมื่อมีการเปลี่ยนแปลงเกิดขึ้นกับ item คนที่สามารถเข้าถึง item ได้ จะเห็นการเปลี่ยนแปลงนั้นเหมือนกัน</li>
+</ul>
+<div></div>
+<div><b>Item ที่สามารถแบ่งปันได้</b></div>
+<ul>
+	<li>Task
+<ul>
+	<li>Subtask ของ task ใดจะถูก share ไปพร้อมกับ task เสมอ โดยมองว่า subtask เป็นส่วนหนึ่งของ task</li>
+	<li>Subtask ไม่มี permission ของตัวเอง</li>
+	<li>สิทธิ์ edit ของ task แม่ จะทำให้สามารถแก้ไข และเพิ่ม/ลบ subtask ได้</li>
+</ul>
+</li>
+	<li>Category
+<ul>
+	<li>State ของ category จะถูก share ไปพร้อมกันกับ category เสมอ โดยมองว่า state เป็นส่วนหนึ่งของ category</li>
+	<li>State ไม่มี permission ของตัวเอง</li>
+	<li>สิทธิ์ edit ของ category จะทำให้สามารถแก้ไข และเพิ่ม/ลบ state ได้</li>
+	<li>เมื่อทำการ share category, task ที่อยู่ใต้ category นั้นจะถูก share ไปด้วย
+<ul>
+	<li>เว้นแต่กรณีที่ผู้ใช้ไม่มีสิทธิ์ share task ผลจะเป็นว่า task ก้อนนั้นจะไม่ถูก share ไปด้วย</li>
+</ul>
+</li>
+</ul>
+</li>
+	<li>Event
+<ul>
+	<li>Recurrence event จะตามไปด้วย*</li>
+</ul>
+</li>
+	<li>Calendar
+<ul>
+	<li>เมื่อทำการ share calendar, event ที่อยู่ใต้ calendar นั้นจะถูก share ไปด้วย
+<ul>
+	<li>เว้นแต่กรณีที่ผู้ใช้ไม่มีสิทธิ์ share event ผลจะเป็นว่า event ก้อนนั้นจะไม่ถูก share ไปด้วย</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <div></div>
 <div><b>Permission</b></div>
 <ul>
-	<li>Inherit permission
-<ul>
-	<li>Task &gt; subtask</li>
-	<li>Category &gt; state</li>
-	<li>Root event &gt; recurrence event</li>
-</ul>
-</li>
-	<li>Bit string</li>
-	<li>Permission
+	<li>ผู้ใช้สามารถกำหนดสิทธิ์การเข้าถึง item ของเพื่อนได้ โดยการกำหนด permission ในการเข้าถึง ซึ่งสามารถกำหนดได้ ทั้งจังหวะที่ share ของให้เพื่อน และหลังจาก share ให้เพื่อนไปแล้ว</li>
+	<li>Permission จะถูกเก็บเป็น bit string ซึ่งจริงๆเก็บเป็น int ตัวนึง</li>
+	<li>Permission object จะมีหน้าตาดังนี้
 <ul>
 	<li>Key: username</li>
-	<li>Value: policy</li>
+	<li>Value: policy (int)</li>
 </ul>
 </li>
-	<li>Using
+	<li>Permission ที่ใช้งาน
 <ul>
 	<li>Read
 <ul>
@@ -73,4 +104,4 @@ published: true
 </ul>
 </li>
 </ul>
-<div></div>
+</div>
