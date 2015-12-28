@@ -31,23 +31,36 @@ published: true
 เมื่อรัน script นี้แล้ว จะได้ database 1 instance ที่รันอยู่ที่ port ที่ระบุ</li>
 </ol>
 <ul>
-	<li>create feed or history database with its tables, indices and BDR extension</li>
+	<li>create feed database with its tables, indices and BDR extension</li>
 </ul>
 <ol>
 	<li>ตรวจดูไฟล์ config ว่าตั้งค่าไว้ถูกต้องหรือไม่
-file: crossweb/node_modules/feed/bin/initial-script/initial-config/(createdb.conf.js | createdb.prod.conf.js)
+file: crossweb/node_modules/feed/bin/initial-script/initial-config/(create_feed_db.conf.js | create_feed_db.prod.conf.js)
 โดยมีค่าที่สำคัญ คือ
-1. org_name คือ organization name (หลัง @ ใน username)
-2. postgres คือ ที่อยู่ของ postgres instance database (ใช้ user เดียวกับ username ขณะ init (default: postgres), ใช้ password เดียวกับ password ขณะ init (default: ""))
+1. customer_name คือ customer name (หลัง @ ใน username)
+2. postgres คือ ที่อยู่ของ postgresql database instance (ใช้ user เดียวกับ user ขณะ init (default: postgres), ใช้ password เดียวกับ password ขณะ init (default: ""))
 3. create_feed_db
-3.1 doCreate คือ จะสร้าง feed database หรือไม่
-3.2 is_cloud_or_local คือ ให้ระบุว่า feed_database ที่สร้างนี้ อยู่บน cloud หรือ local
-3.3 cloud คือ ถ้า is_cloud_or_local คือ 'local' ให้ระบุที่อยู่ของ feed postgres database ที่ org_name เดียวกัน บน cloud ที่นี่
-4. create_history_db
-4.1 doCreate คือ จะสร้าง history database หรือไม่ (history database ควรจะอยู่เฉพาะบน cloud)</li>
+3.1 doCreate คือ จะสร้าง feed database หรือไม่ (ควรจะ true)
+3.2 proxy คือ ถ้ามีการวาง proxy หน้าเครื่องที่รัน postgresql ก็ให้ระบุที่อยู่ของ proxy นั้นด้วย
+3.3 is_cloud_or_local คือ ให้ระบุว่า feed_database ที่สร้างนี้ อยู่บน cloud หรือ local
+3.4 cloud คือ ถ้า is_cloud_or_local คือ 'local' ให้ระบุที่อยู่ของ feed postgresql database ที่ customer_name เดียวกัน บน cloud ที่นี่</li>
 	<li>cd เข้าไปที่ directory: crossweb/node_modules/feed/bin/initial-script</li>
-	<li>รันคำสั่ง node initial-script/create_PGDB_with_BDR_extension.js -c ./initial-config/(createdb.conf.js | createdb.conf.prod.js)
-เมื่อรัน script นี้แล้ว จะได้ database ที่กำหนด พร้อมกับสร้าง table, index และพยายามจะ sync cloud-local</li>
+	<li>รันคำสั่ง node create_feed_PGDB_with_BDR_extension.js -c ./initial-config/(create_feed_db.conf.js | create_feed_db.conf.prod.js)
+เมื่อรัน script นี้แล้ว จะได้ feed database ที่กำหนด พร้อมกับสร้าง table, index และพยายามจะ sync cloud-local</li>
+</ol>
+<ul>
+	<li>create history database with its tables, indices</li>
+</ul>
+<ol>
+	<li>ตรวจดูไฟล์ config ว่าตั้งค่าไว้ถูกต้องหรือไม่
+file: crossweb/node_modules/feed/bin/initial-script/initial-config/(create_history_db.conf.js | create_history_db.prod.conf.js)
+โดยมีค่าที่สำคัญ คือ
+1. postgres คือ ที่อยู่ของ postgresql database instance (ใช้ user เดียวกับ user ขณะ init (default: postgres), ใช้ password เดียวกับ password ขณะ init (default: ""))
+2. create_history_db
+2.1 doCreate คือ จะสร้าง history database หรือไม่ (ควรจะ true)</li>
+	<li>cd เข้าไปที่ directory: crossweb/node_modules/feed/bin/initial_script</li>
+	<li>รันคำสั่ง node create_history_PGDB.js -c ./initial-config/(create_history_db.conf.js | create_history_db.prod.conf.js)
+เมื่อรัน script นี้แล้ว จะได้ history database ที่กำหนด พร้อมกันสร้าง table และ index</li>
 </ol>
 <ul>
 	<li>start service ต่างๆ ของฟีด</li>
@@ -57,7 +70,7 @@ file: crossweb/node_modules/feed/bin/initial-script/initial-config/(createdb.con
 </ol>
 &nbsp;
 <ul>
-	<li>create feed database สำหรับ org แบบ local only
-สำหรับ local only ให้สร้าง postgres database แบบ cloud แทน นั่นคือ ค่า is_cloud_or_local = cloud
-แล้วเมื่อ local only นั้น จะต้องไปต่อกับ cloud ก็ให้สร้าง postgres database ที่ cloud เป็น local แทน (is_cloud_or_local = local) แล้วค่า cloud ก็ให้ระบุที่อยู่ของ feed postgres database ที่ org_name เดียวกัน ของ local only นั้น<span style="font-weight: 300;">   </span></li>
+	<li>create feed database สำหรับ customer แบบ local only
+สำหรับ local only ให้สร้าง postgresql feed database แบบ cloud แทน นั่นคือ ค่า is_cloud_or_local = cloud
+แล้วเมื่อ local only นั้น จะต้องไปต่อกับ cloud ก็ให้สร้าง postgres database ที่ cloud เป็น local แทน (is_cloud_or_local = local) แล้วค่า cloud ก็ให้ระบุที่อยู่ของ feed postgresql database ที่ customer_name เดียวกัน ของ local only นั้น<span style="font-weight: 300;">   </span></li>
 </ul>
