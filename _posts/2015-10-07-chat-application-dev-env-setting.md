@@ -12,13 +12,6 @@ published: true
 <ol>
 	<li>Nodejs version &gt; 4.0  (<a href="https://nodejs.org/en/">https://nodejs.org/en/</a>)</li>
 	<li>pkg-config, cmake, hiredis, curl, sqlite (install by home-brew (<a href="http://brew.sh">http://brew.sh</a>))</li>
-	<li><del>openssl (download from here <a href="https://www.openssl.org/source/openssl-1.0.2d.tar.gz">www.openssl.org</a>) and install</del>
-<pre><del>cd openssl-1.0.2d
-./Configure darwin64-x86_64-cc
-make
-make install
-</del></pre>
-OpenSSL source code was added into project and was built by project since commit 0fe3699 in git transportlayer (14/12/2015)</li>
 	<li>ZMQ version &gt; 4.0.3 compile with libsodium
 <pre>brew libsodium
 curl -O http://download.zeromq.org/zeromq-4.1.3.tar.gz
@@ -32,35 +25,56 @@ make &amp;&amp; make install</pre>
 	<li>openldap and berkeley-db (installation guide in <a href="http://192.168.178.12/?p=4869">http://192.168.178.12/?p=4869</a>)</li>
 	<li>Download orient-db (download from here <a href="http://orientdb.com/download.php?email=unknown@unknown.com&amp;file=orientdb-community-2.1.6.tar.gz&amp;os=mac">Orient-db</a>)</li>
 </ol>
-<strong>Installation</strong>
+<strong>Installation (for first time only)</strong>
 <ol>
 	<li>Clone project from http://192.168.178.10/git/chat
 *If you use git command line, you need to use
 <pre>git submodule update --init --recursive</pre>
 </li>
-	<li>Switch branch to 'web-0.1.0-dev'</li>
+	<li>Switch branch to 'web-0.1.0-dev' (backend only) or 'web-react' (with UI)</li>
 	<li>Build chat project in /chat
-<pre>npm install</pre>
+<pre>cd script
+./rebuild.sh</pre>
 </li>
+</ol>
+<strong>Rebuild Chat</strong>
+<ol>
+	<li>rebuild
+<pre>cd script
+./stop-all.sh
+./rebuild.sh
+./start-all.sh
+./adduser.sh</pre>
+</li>
+	<li>clear cookie in browser</li>
+	<li>login again</li>
 </ol>
 <strong>Run Chat</strong>
 <ol>
 	<li>run orient-db
 <pre>go to orient-db folder
-cd bin
-./server.sh</pre>
+bin/server.sh</pre>
 </li>
 	<li>run chat service
-<pre>cd chat/script
-./rebuild.sh</pre>
+<pre>cd script
+./start-all.sh
+./adduser.sh</pre>
 </li>
 </ol>
+<strong>Useful script</strong>
+<ul>
+	<li>./status.sh - check the status of all service</li>
+	<li>./start-all.sh - start all service</li>
+	<li>./stop-all.sh - stop all service</li>
+	<li>./reset-all.sh - reset all service, clear database and start service again</li>
+</ul>
 <strong>How to access log</strong>
 <ul>
-	<li>friend log &gt;&gt; /tmp/chat_log/friendservice.log</li>
+	<li>friend service log &gt;&gt; /tmp/chat_log/friendservice.log</li>
+	<li>friend-node log &gt;&gt; /tmp/chat_log/friendNode.log</li>
 	<li>router log &gt;&gt; /tmp/chat_log/router.log</li>
-	<li>hwserver log &gt;&gt;/tmp/chat_log/server.log</li>
-	<li>node log &gt;&gt;/tmp/chat_log/node.log</li>
+	<li>hwserver log &gt;&gt;/tmp/chat_log/hwserver.log</li>
+	<li>chat-node log &gt;&gt;/tmp/chat_log/chat-node.log</li>
 </ul>
 <strong>GUI for ldap</strong>
 <ul>
