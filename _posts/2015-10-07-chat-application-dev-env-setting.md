@@ -26,10 +26,10 @@ make &amp;&amp; make install</pre>
 	<li>Download orient-db (download from here <a href="http://orientdb.com/download.php?email=unknown@unknown.com&amp;file=orientdb-community-2.1.6.tar.gz&amp;os=mac">Orient-db</a>)</li>
 </ol>
 ถ้า brew Permissions Denied  แก้ตามนี้
-<pre><code>~ $ sudo chown -R `whoami` /usr/local
+<pre>~ $ sudo chown -R `whoami` /usr/local
 Password:
 ~$ brew link --overwrite node
-Linking /usr/local/Cellar/node/0.10.4... 5 symlinks created</code></pre>
+Linking /usr/local/Cellar/node/0.10.4... 5 symlinks created</pre>
 &nbsp;
 
 <strong>Installation (for first time only)</strong>
