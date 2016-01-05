@@ -25,6 +25,13 @@ make &amp;&amp; make install</pre>
 	<li>openldap and berkeley-db (installation guide in <a href="http://192.168.178.12/?p=4869">http://192.168.178.12/?p=4869</a>)</li>
 	<li>Download orient-db (download from here <a href="http://orientdb.com/download.php?email=unknown@unknown.com&amp;file=orientdb-community-2.1.6.tar.gz&amp;os=mac">Orient-db</a>)</li>
 </ol>
+ถ้า brew Permissions Denied  แก้ตามนี้
+<pre><code>~ $ sudo chown -R `whoami` /usr/local
+Password:
+~$ brew link --overwrite node
+Linking /usr/local/Cellar/node/0.10.4... 5 symlinks created</code></pre>
+&nbsp;
+
 <strong>Installation (for first time only)</strong>
 <ol>
 	<li>Clone project from http://192.168.178.10/git/chat
