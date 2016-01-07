@@ -56,13 +56,20 @@ bin/server.sh</pre>
 ./adduser.sh</pre>
 </li>
 </ol>
-<strong>Run Chat</strong>
+<strong>Run Chat after install</strong>
 <ol>
-	<li>run orient-db (if not start yet, this step is also in Installation section)
+	<li>start chat service
+<pre>cd script
+./start-all.sh</pre>
+</li>
+</ol>
+<strong>Run Chat after turn on computer</strong>
+<ol>
+	<li>run orient-db
 <pre>go to orient-db folder
 bin/server.sh</pre>
 </li>
-	<li>start authentication ldap (if not start yet, this step is also in Installation section)
+	<li>start authentication ldap
 <pre>cd script
 ./start-authen.sh</pre>
 </li>
