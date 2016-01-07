@@ -81,9 +81,7 @@ file: crossweb/node_modules/feed/bin/initial-script/initial-config/(create_histo
 </span><span class="s1">postgres=#</span></p>
 </li>
 	<li>ลองพิมพ์คำสั่ง
-postgres=# drop database "feed_database_name";  (ถ้าชื่อ database มีอักขระพิเศษ เช่น "@" จะต้องใส่ "" ด้วย)
-
-2.1 ถ้าได้ผลลัพธ์
+postgres=# drop database "feed_database_name";  (ถ้าชื่อ database มีอักขระพิเศษ เช่น "@" จะต้องใส่ "" ด้วย)2.1 ถ้าได้ผลลัพธ์
 postgres=# drop database "feed_database_name";
 DROP DATABASE
 แสดงว่าการ drop database สำเร็จ
@@ -124,7 +122,7 @@ postgres=# select * from pg_replication_slots; เพื่อดูว่า �
 <p class="p1"><span class="s1"> bdr_16385_6156417642852889029_1_16385__ | bdr<span class="Apple-converted-space">    </span>| logical <span class="Apple-converted-space">  </span>|<span class="Apple-converted-space">  </span>16385 | feed@crossflow.ws | t<span class="Apple-converted-space">      </span>|<span class="Apple-converted-space">      </span>| <span class="Apple-converted-space">        </span>1061 | 0/18C3C30
 </span><span class="s1">(1 row)
 (จำนวน row จะตามจำนวน replication_slot)
-นำค่าตรงช่อง slot_name สนใจเฉพาะ row ที่มีช่อง database ตรงกับ database name ที่จะ drop
+นำค่าตรงช่อง slot_name สนใจเฉพาะ row ที่มีค่าในช่อง database ตรงกับ database name ที่จะ drop
 2.3.3 พิมพ์คำสั่ง
 </span><span class="s1">postgres=# select * from pg_drop_replication_slot('slot_name ที่มีค่าใน column database ตรงกับ database name ที่จะ drop');
 (ในวงเล็บ ต้องมี '' (single quote ด้วย))
@@ -134,8 +132,6 @@ postgres=# select * from pg_replication_slots; เพื่อดูว่า �
 <p class="p1"><span class="s1"> pg_drop_replication_slot
 </span><span class="s1">--------------------------
 </span><span class="s1">(1 row)
-</span><span class="s1">2.3.4 ทดลอง postgres=# drop database "feed_database_name"; อีกครั้ง
-
-</span></p>
-</li>
+</span><span class="s1">2.3.4 ทดลอง postgres=# drop database "feed_database_name"; อีกครั้ง</span></p>
+&nbsp;</li>
 </ol>
