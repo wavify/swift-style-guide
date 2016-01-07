@@ -102,9 +102,7 @@ pg_terminate_backend
 t
 (1 row)
 (จำนวน t และ จำนวน row จะเป็นตามจำนวน session ที่ค้างอยู่)
-2.2.3 ทดลอง postgres=# drop database "feed_database_name"; อีกครั้ง
-
-2.3 ถ้าได้ผลลัพธ์
+2.2.3 ทดลอง postgres=# drop database "feed_database_name"; อีกครั้ง2.3 ถ้าได้ผลลัพธ์
 postgres=# drop database "feed@crossflow.ws";
 ERROR:  database "feed@crossflow.ws" is used by a logical replication slot
 DETAIL:  There is 1 slot, 1 of them active.
@@ -130,6 +128,10 @@ postgres=# select * from pg_replication_slots; เพื่อดูว่า �
 <p class="p1"><span class="s1"> pg_drop_replication_slot
 </span><span class="s1">--------------------------
 </span><span class="s1">(1 row)
-</span><span class="s1">2.3.4 ทดลอง postgres=# drop database "feed_database_name"; อีกครั้ง</span></p>
+2.3.4 ถ้าไม่สามารถปิด instance database ที่ sync อยู่ได้ และทำให้ไม่สามารถ drop replication slots ได้ (</span><span class="s1">ERROR:  replication slot "bdr_18750_6230626751636819266_1_69758__" is already active</span><span class="s1">) ให้ทำตามนี้
+</span><span class="s1">1) set wal_sender_timeout to some low value (1); (ในไฟล์ postgresql.conf)
+</span><span class="s1">2) reload </span><span class="s1">(postgres=# select pg_reload_conf();)</span><span class="s1">
+</span><span class="s1">3) call pg_drop_replication_slot('slotname')</span><span class="s1">
+</span><span class="s1">2.3.5 ทดลอง postgres=# drop database "feed_database_name"; อีกครั้ง</span></p>
 &nbsp;</li>
 </ol>
