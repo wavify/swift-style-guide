@@ -70,7 +70,7 @@ file: crossweb/node_modules/feed/bin/initial-script/initial-config/(create_histo
 </ol>
 &nbsp;
 <ul>
-	<li><strong>drop feed database</strong></li>
+	<li><strong>drop feed database (manual)</strong></li>
 </ul>
 <ol>
 	<li>psql เข้าไปที่ default database(default = postgres) ใน instance เดียวกับ feed database ที่จะลบ
@@ -84,9 +84,7 @@ file: crossweb/node_modules/feed/bin/initial-script/initial-config/(create_histo
 postgres=# drop database "feed_database_name";  (ถ้าชื่อ database มีอักขระพิเศษ เช่น "@" จะต้องใส่ "" ด้วย)2.1 ถ้าได้ผลลัพธ์
 postgres=# drop database "feed_database_name";
 DROP DATABASE
-แสดงว่าการ drop database สำเร็จ
-
-2.2 ถ้าได้ผลลัพธ์
+แสดงว่าการ drop database สำเร็จ2.2 ถ้าได้ผลลัพธ์
 postgres=# drop database test;
 ERROR:  database "test" is being accessed by other users
 DETAIL:  There is 1 other session using the database.
