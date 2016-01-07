@@ -32,7 +32,7 @@ Password:
 Linking /usr/local/Cellar/node/0.10.4... 5 symlinks created</pre>
 &nbsp;
 
-<strong>Installation (for first time only)</strong>
+<strong>Installation (for first time only or after pull from git repo)</strong>
 <ol>
 	<li>Clone project from http://192.168.178.10/git/chat
 *If you use git command line, you need to use
@@ -43,30 +43,42 @@ Linking /usr/local/Cellar/node/0.10.4... 5 symlinks created</pre>
 <pre>cd script
 ./rebuild.sh</pre>
 </li>
-</ol>
-<strong>Rebuild Chat</strong>
-<ol>
-	<li>rebuild
-<pre>cd script
-./stop-all.sh
-./rebuild.sh
-./start-all.sh
-./adduser.sh</pre>
-</li>
-	<li>clear cookie in browser</li>
-	<li>login again</li>
-</ol>
-<strong>Run Chat</strong>
-<ol>
 	<li>run orient-db
 <pre>go to orient-db folder
 bin/server.sh</pre>
 </li>
-	<li>run chat service
+	<li>start authentication ldap
 <pre>cd script
-./start-all.sh
+./start-authen.sh</pre>
+</li>
+	<li>add user to database (optional): use at first time or want to reset database
+<pre>cd script
 ./adduser.sh</pre>
 </li>
+</ol>
+<strong>Run Chat</strong>
+<ol>
+	<li>run orient-db (if not start yet, this step is also in Installation section)
+<pre>go to orient-db folder
+bin/server.sh</pre>
+</li>
+	<li>start authentication ldap (if not start yet, this step is also in Installation section)
+<pre>cd script
+./start-authen.sh</pre>
+</li>
+	<li>start chat service
+<pre>cd script
+./start-all.sh</pre>
+</li>
+</ol>
+<strong>Reset Chat</strong>
+<ol>
+	<li>reset server database
+<pre>cd script
+./reset-all.sh</pre>
+</li>
+	<li>clear cookie in browser</li>
+	<li>login again</li>
 </ol>
 <strong>Useful script</strong>
 <ul>
