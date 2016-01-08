@@ -78,6 +78,11 @@ bin/server.sh</pre>
 ./start-all.sh</pre>
 </li>
 </ol>
+
+<hr />
+
+&nbsp;
+
 <strong>Reset Chat</strong>
 <ol>
 	<li>reset server database
@@ -86,6 +91,25 @@ bin/server.sh</pre>
 </li>
 	<li>clear cookie in browser</li>
 	<li>login again</li>
+</ol>
+<strong>Clean and Adduser Authentication</strong>
+<ol>
+	<li>stop authen
+<pre>cd script
+./stop-authen.sh</pre>
+</li>
+	<li>remove database
+<pre>cd script
+./removeuser.sh</pre>
+</li>
+	<li>start authen
+<pre>cd script
+./start-authen.sh</pre>
+</li>
+	<li>add user to database
+<pre>cd script
+./adduser.sh</pre>
+</li>
 </ol>
 <strong>Useful script</strong>
 <ul>
