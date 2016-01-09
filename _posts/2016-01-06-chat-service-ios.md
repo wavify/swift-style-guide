@@ -8,7 +8,7 @@ layout: post
 permalink: http://192.168.178.12/?p=5315
 published: true
 ---
-Install 1-5 ตาม link http://192.168.178.12/?p=5207
+Install 1-5 ตาม link <a href="http://192.168.178.12/?p=5207" target="_blank">http://192.168.178.12/?p=5207</a>
 <ol>
 	<li>Clone project from http://192.168.178.10/git/chat</li>
 	<li>update submodule
