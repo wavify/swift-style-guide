@@ -12,7 +12,7 @@ published: true
 <ol>
 	<li>Nodejs version &gt; 4.0  (<a href="https://nodejs.org/en/">https://nodejs.org/en/</a>)</li>
 	<li>pkg-config, cmake, hiredis, curl, sqlite (install by home-brew (<a href="http://brew.sh">http://brew.sh</a>))</li>
-	<li>ZMQ version &gt; 4.0.3 compile with libsodium
+	<li>ZMQ version &gt; 4.1.3 compile with libsodium
 <pre>brew install libsodium
 curl -O http://download.zeromq.org/zeromq-4.1.3.tar.gz
 tar -zxvf zeromq-4.1.3.tar.gz
