@@ -80,6 +80,7 @@ mkdir build
 cd build
 cmake ..
 make</code></li>
+	<li>gen user ใน orient (ทำแค่ครั้งเดียว)./ordb_gen.out mock/tw 0.0.0.0 SRDB2</li>
 	<li>ทำการรัน service
 <code>./service.out local0</code></li>
 	<li>ทำการรัน friend node
