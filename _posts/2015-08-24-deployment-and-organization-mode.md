@@ -32,7 +32,7 @@ Deployment จะแบ่งออกเป็น 4 ประเภทคือ
 	<li>แบบของ deployment กำหนดโดย license</li>
 </ol>
 </li>
-	<li>Public cloud (mode = 5) เป็น cloud deployment เช่นเดียวกัน แต่ไม่ใช่ deployment หลัก</li>
+	<li>Public cloud (mode = 2) เป็น cloud deployment เช่นเดียวกัน แต่ไม่ใช่ deployment หลัก</li>
 	<li>Stand Alone (mode = 3) เป็น local only คือจะไม่มีการยิงอะไรขึ้นมาบน cloud อีก สร้าง org หรือ set config ที่เครื่องตัวเองได้เลย</li>
 </ol>
 <ul>
