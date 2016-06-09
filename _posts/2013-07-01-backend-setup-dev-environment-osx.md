@@ -48,7 +48,7 @@ published: true
 <h1>การ start service ต่างๆ</h1>
 <ol>
 	<li><span style="line-height: 15px;">start dependency service โดยคำสั่ง <strong>./startAll.sh</strong> ที่ path <strong>/crossweb/tests/services</strong>
-คำสั่งนี้จะทำการ start mongod, init mail mongo, init quota, slapd, redis-server, IPS, LG, RemoteCL1, RemoteCL2, add app info, add license info และ HAProxy ตามลำดับ</span></li>
+คำสั่งนี้จะทำการ start mongod, init mail mongo, init quota, slapd, redis-server, postgres, HAProxy, IPS, LG, friendserver, router, shadow, add app info, add license info ตามลำดับ</span></li>
 	<li>start web service โดยคำสั่ง <strong>./startWebService.sh</strong> ที่ path <strong>/crossweb/tests/services</strong>
 คำสั่งนี้จะทำการ start UM, Todo, Contact, Friend, Mail-Client, Publisher และ Subscriber ตามลำดับ</li>
 </ol>
@@ -57,8 +57,14 @@ published: true
 	<li><span style="line-height: 15px;">stop web service โดยคำสั่ง <strong>./stopWebService.sh</strong> ที่ path <strong>/crossweb/tests/services</strong>
 คำสั่งนี้จะทำการ stop Subscriber, Publisher, Mail-Client, Friend, Contact, Todo และ UM ตามลำดับ</span></li>
 	<li>stop dependency service โดยคำสั่ง <strong>./stopAll.sh</strong> ที่ path <strong>/crossweb/tests/services</strong>
-คำสั่งนี้จะทำการ stop RemoteCL1, RemoteCL2, LG, IPS, mongod, slapd, redis-server และ HAProxy ตามลำดับ</li>
+คำสั่งนี้จะทำการ stop HAProxy, LG, IPS, mongod, slapd, redis-server, postgres, friendserver, router, shadow ตามลำดับ</li>
 </ol>
+<h1><strong>การดู status service ต่างๆ</strong></h1>
+<ul>
+	<li><strong>./statusBackend.sh</strong> สำหรับดู status ของ service ที่เปิดด้วย startAll (HAProxy, LG, IPS, mongod, slapd, redis-server, postgres, friendserver, router, shadow)</li>
+	<li><strong>./statusWebService.sh</strong> สำหรับดู status ของ service ที่เปิดด้วย startWebService (UM, Todo, Contact, Friend, Mail-Client, Publisher, Subscriber)</li>
+	<li><strong>./statusAll.sh</strong> สำหรับดู status ของ service ทั้งหมด</li>
+</ul>
 <h1>การลบ user data</h1>
 <ol>
 	<li><span style="line-height: 15px;">ลบ store ของ user และ data ที่เก็บใน mongodb โดยคำสั่ง <strong>./clearUserData.sh</strong> ที่ path <strong>/crossweb/tests/services</strong></span></li>
