@@ -106,7 +106,7 @@ published: true
 <a name="bdb-installation"></a>
 <h1>BerkeleyDB Installation</h1>
 <ol>
-	<li>download <a>http://download.oracle.com/berkeley-db/db-6.0.20.tar.gz</a></li>
+	<li>download <a href="http://download.oracle.com/berkeley-db/db-6.0.20.tar.gz">http://download.oracle.com/berkeley-db/db-6.0.20.tar.gz</a></li>
 	<li>extract file and install<code>tar -xvzf db-6.0.20.tar.gz
 cd db-6.0.20/build_unix
 ../dist/configure
