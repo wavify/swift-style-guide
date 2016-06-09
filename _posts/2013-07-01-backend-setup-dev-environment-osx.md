@@ -19,7 +19,7 @@ published: true
 </ul>
 </li>
 	<li><a href="#osx-gcc-installer-installation">osx-gcc-installer</a></li>
-	<li><a href="#nodejs-installation">NodeJS</a> (&gt;= 0.8.27)</li>
+	<li><a href="#nodejs-installation">NodeJS</a> (v5.0.0)</li>
 	<li><a href="#bdb-installation">BerkeleyDB</a></li>
 	<li><a href="#openldap-installation">OpenLDAP</a> &gt; 2.4.28</li>
 	<li><a href="#redis-installation">Redis</a></li>
@@ -77,10 +77,9 @@ published: true
 </ul>
 <a name="xcode-installation"></a>
 <h1>Xcode Installation</h1>
-<ol>
-	<li><span style="line-height: 15px;">Install จาก App-Store หรือ</span></li>
-	<li>ขอไฟล์ Installer จากคุณดล</li>
-</ol>
+<ul>
+	<li><span style="line-height: 15px;">Install จาก App-Store</span></li>
+</ul>
 <p style="text-align: right;"><a href="#top-page">^ top</a></p>
 <a name="command-line-tools-installation"></a>
 <h1>Xcode Command Line Tools</h1>
