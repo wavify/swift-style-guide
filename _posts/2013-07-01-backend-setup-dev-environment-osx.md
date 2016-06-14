@@ -28,7 +28,7 @@ published: true
 	<li><a href="#graphicsmagick-installation">GraphicsMagick</a> (ใช้สร้าง thumbnail ของ email attachment)</li>
 	<li><a href="#postgresql-installation">PostgreSQL</a> (ใช้เก็บ Feed)</li>
 	<li>pkg-config, cmake, hiredis, curl, sqlite, jansson (install by home-brew (<a href="http://brew.sh/">http://brew.sh</a>))</li>
-	<li><a href="#zmq-installation">ZMQ</a></li>
+	<li><a href="#zmq-installation">ZMQ</a> version &gt; 4.1.3 and compile with libsodium</li>
 </ul>
 </li>
 	<li>ติดตั้ง Node Module ต่างๆ ได้แก่
@@ -183,24 +183,24 @@ sudo make install</code></li>
 <p style="text-align: right;"> <a href="#top-page">^ top</a></p>
 <a name="postgresql-installation"></a>
 <h1>PostgreSQL Installation</h1>
-<ol>
-	<li><code>$ curl -s "http://git.postgresql.org/gitweb/?p=2ndquadrant_bdr.git;a=blob_plain;f=scripts/bdr_quickstart.sh;hb=bdr-plugin/REL0_9_STABLE" | bash
-export PATH=$HOME/2ndquadrant_bdr/bdr/bin:$PATH
-mkdir -p /usr/local/var/postgreSQL
-initdb -D /usr/local/var/postgreSQL -A trust -U postgres
+<ul>
+	<li><code>$ curl -s "http://git.postgresql.org/gitweb/?p=2ndquadrant_bdr.git;a=blob_plain;f=scripts/bdr_quickstart.sh;hb=bdr-plugin/REL0_9_STABLE" | bash</code></li>
+	<li><code>export PATH=$HOME/2ndquadrant_bdr/bdr/bin:$PATH</code></li>
+	<li><code>mkdir -p /usr/local/var/postgreSQL</code></li>
+	<li><code>initdb -D /usr/local/var/postgreSQL -A trust -U postgres
 </code></li>
-</ol>
+</ul>
 <a name="zmq-installation"></a>
 <h1>ZMQ Installation</h1>
-<ol>
-	<li><code>brew install libsodium
-curl -O http://download.zeromq.org/zeromq-4.1.3.tar.gz
-tar -zxvf zeromq-4.1.3.tar.gz
-cd zeromq-4.1.3
-export sodium_LIBS="-L/usr/local/lib/ -lsodium"
-export sodium_CFLAGS="-I/usr/local/include"
-./configure --with-libsodium=/usr/local/
-make &amp;&amp; make install
+<ul>
+	<li><code>brew install libsodium</code></li>
+	<li><code>curl -O http://download.zeromq.org/zeromq-4.1.3.tar.gz</code></li>
+	<li><code>tar -zxvf zeromq-4.1.3.tar.gz</code></li>
+	<li><code>cd zeromq-4.1.3</code></li>
+	<li><code>export sodium_LIBS="-L/usr/local/lib/ -lsodium"</code></li>
+	<li><code>export sodium_CFLAGS="-I/usr/local/include"</code></li>
+	<li><code>./configure --with-libsodium=/usr/local/</code></li>
+	<li><code>make &amp;&amp; make install
 </code></li>
-</ol>
+</ul>
 &nbsp;
