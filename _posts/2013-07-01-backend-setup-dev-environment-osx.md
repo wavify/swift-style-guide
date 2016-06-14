@@ -28,6 +28,7 @@ published: true
 	<li><a href="#graphicsmagick-installation">GraphicsMagick</a> (ใช้สร้าง thumbnail ของ email attachment)</li>
 	<li><a href="#postgresql-installation">PostgreSQL</a> (ใช้เก็บ Feed)</li>
 	<li>pkg-config, cmake, hiredis, curl, sqlite, jansson (install by home-brew (<a href="http://brew.sh/">http://brew.sh</a>))</li>
+	<li><a href="#zmq-installation">ZMQ</a></li>
 </ul>
 </li>
 	<li>ติดตั้ง Node Module ต่างๆ ได้แก่
@@ -187,6 +188,19 @@ sudo make install</code></li>
 export PATH=$HOME/2ndquadrant_bdr/bdr/bin:$PATH
 mkdir -p /usr/local/var/postgreSQL
 initdb -D /usr/local/var/postgreSQL -A trust -U postgres
+</code></li>
+</ol>
+<a name="zmq-installation"></a>
+<h1>ZMQ Installation</h1>
+<ol>
+	<li><code>brew install libsodium
+curl -O http://download.zeromq.org/zeromq-4.1.3.tar.gz
+tar -zxvf zeromq-4.1.3.tar.gz
+cd zeromq-4.1.3
+export sodium_LIBS="-L/usr/local/lib/ -lsodium"
+export sodium_CFLAGS="-I/usr/local/include"
+./configure --with-libsodium=/usr/local/
+make &amp;&amp; make install
 </code></li>
 </ol>
 &nbsp;
