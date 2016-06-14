@@ -27,6 +27,7 @@ published: true
 	<li><a href="#haproxy-installation">HAProxy</a> 1.5-dev18 (<a href="http://192.168.178.4/trac/cross/ticket/4711">#4711</a>)</li>
 	<li><a href="#graphicsmagick-installation">GraphicsMagick</a> (ใช้สร้าง thumbnail ของ email attachment)</li>
 	<li><a href="#postgresql-installation">PostgreSQL</a> (ใช้เก็บ Feed)</li>
+	<li>pkg-config, cmake, hiredis, curl, sqlite, jansson (install by home-brew (<a href="http://brew.sh/">http://brew.sh</a>))</li>
 </ul>
 </li>
 	<li>ติดตั้ง Node Module ต่างๆ ได้แก่
