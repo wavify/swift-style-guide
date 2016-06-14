@@ -193,15 +193,14 @@ initdb -D /usr/local/var/postgreSQL -A trust -U postgres
 <a name="zmq-installation"></a>
 <h1>ZMQ Installation</h1>
 <ol>
-	<code><li>brew install libsodium</li>
-<li>curl -O http://download.zeromq.org/zeromq-4.1.3.tar.gz
+	<code>brew install libsodium
+curl -O http://download.zeromq.org/zeromq-4.1.3.tar.gz
 tar -zxvf zeromq-4.1.3.tar.gz
 cd zeromq-4.1.3
 export sodium_LIBS="-L/usr/local/lib/ -lsodium"
 export sodium_CFLAGS="-I/usr/local/include"
 ./configure --with-libsodium=/usr/local/
 make &amp;&amp; make install
-</li>
 </code>
 </ol>
 &nbsp;
