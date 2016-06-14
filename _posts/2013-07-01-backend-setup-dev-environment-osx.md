@@ -36,8 +36,8 @@ published: true
 	<li>node module ของ module appinfo ติดตั้งโดยคำสั่ง <strong>npm install</strong> ที่ path <strong>/iphone-service/node_modules/appinfo</strong></li>
 	<li>หมายเหตุ
 <ul>
-	<li>ต้องใช้ <strong>npm</strong> ที่ version 1.3.15</li>
-	<li><strong>npm</strong> <strong>-g install npm@1.3.15</strong> &gt;&gt; เพื่อ update version ของ <strong>npm</strong></li>
+	<li>ต้องใช้ <strong>npm</strong> ที่ version 3.3.6</li>
+	<li><strong>npm</strong> <strong>-g install npm@3.3.6</strong> &gt;&gt; เพื่อ update version ของ <strong>npm</strong></li>
 </ul>
 </li>
 </ul>
