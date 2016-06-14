@@ -183,24 +183,24 @@ sudo make install</code></li>
 <p style="text-align: right;"> <a href="#top-page">^ top</a></p>
 <a name="postgresql-installation"></a>
 <h1>PostgreSQL Installation</h1>
-<ul>
-	<li><code>$ curl -s "http://git.postgresql.org/gitweb/?p=2ndquadrant_bdr.git;a=blob_plain;f=scripts/bdr_quickstart.sh;hb=bdr-plugin/REL0_9_STABLE" | bash</code></li>
-	<li><code>export PATH=$HOME/2ndquadrant_bdr/bdr/bin:$PATH</code></li>
-	<li><code>mkdir -p /usr/local/var/postgreSQL</code></li>
-	<li><code>initdb -D /usr/local/var/postgreSQL -A trust -U postgres
+<ol>
+	<li><code>$ curl -s "http://git.postgresql.org/gitweb/?p=2ndquadrant_bdr.git;a=blob_plain;f=scripts/bdr_quickstart.sh;hb=bdr-plugin/REL0_9_STABLE" | bash
+export PATH=$HOME/2ndquadrant_bdr/bdr/bin:$PATH
+mkdir -p /usr/local/var/postgreSQL
+initdb -D /usr/local/var/postgreSQL -A trust -U postgres
 </code></li>
-</ul>
+</ol>
 <a name="zmq-installation"></a>
 <h1>ZMQ Installation</h1>
-<ul>
-	<li><code>brew install libsodium</code></li>
-	<li><code>curl -O http://download.zeromq.org/zeromq-4.1.3.tar.gz</code></li>
-	<li><code>tar -zxvf zeromq-4.1.3.tar.gz</code></li>
-	<li><code>cd zeromq-4.1.3</code></li>
-	<li><code>export sodium_LIBS="-L/usr/local/lib/ -lsodium"</code></li>
-	<li><code>export sodium_CFLAGS="-I/usr/local/include"</code></li>
-	<li><code>./configure --with-libsodium=/usr/local/</code></li>
-	<li><code>make &amp;&amp; make install
+<ol>
+	<li><code>brew install libsodium
+curl -O http://download.zeromq.org/zeromq-4.1.3.tar.gz
+tar -zxvf zeromq-4.1.3.tar.gz
+cd zeromq-4.1.3
+export sodium_LIBS="-L/usr/local/lib/ -lsodium"
+export sodium_CFLAGS="-I/usr/local/include"
+./configure --with-libsodium=/usr/local/
+make &amp;&amp; make install
 </code></li>
-</ul>
+</ol>
 &nbsp;
