@@ -176,7 +176,7 @@ make install</code></li>
 	<li>extract file and install<code>tar -xvzf haproxy-1.5-dev18.tar.gz
 cd haproxy-1.5-dev18
 make TARGET=generic USE_OPENSSL=YES USE_ZLIB=YES
-sudo make install</code></li>
+sudo make install</code><p>** ถ้า make แล้วขึ้น error <openssl/ssl.h> file not found ให้เปลี่ยนไปใช้คำสั่ง make แบบนี้แทน <code>make TARGET=generic USE_OPENSSL=YES USE_ZLIB=YES ADDINC=-I/usr/local/opt/openssl/include/ ADDLIB="-L/usr/local/opt/openssl/lib -lcrypto"</code></p></li>
 	<li>create symbolic links to the HAProxy programs in your /usr/local/bin<code> ln -s /usr/local/sbin/haproxy /usr/local/bin/haproxy</code></li>
 </ol>
 <p style="text-align: right;"><a href="#top-page">^ top</a></p>
