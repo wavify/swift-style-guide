@@ -157,7 +157,7 @@ make install</code></li>
 	<li>create symbolic links to the MongoDB programs in your /usr/local/bin (ในที่นี้สมมติว่า source ที่ extract แล้ว อยู่ที่ path /Users/alice/Source<code>ln -s /Users/alice/Source/mongodb-osx-x86_64-2.6.2/bin/mongod /usr/local/bin/mongod</code></li>
 </ol>
 <p style="text-align: right;"><a href="#top-page">^ top</a></p>
-<a name=" orientdb-installation"></a>
+<a name="orientdb-installation"></a>
 <h1>OrientDB Installation</h1>
 <ol>
 	<li style="text-align: left;">download <a href="http://orientdb.com/download.php?email=unknown@unknown.com&amp;file=orientdb-community-2.1.12.tar.gz&amp;os=multi">http://orientdb.com/download.php?email=unknown@unknown.com&amp;file=orientdb-community-2.1.12.tar.gz&amp;os=multi</a></li>
