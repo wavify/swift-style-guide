@@ -24,6 +24,7 @@ published: true
 	<li><a href="#openldap-installation">OpenLDAP</a> &gt; 2.4.28</li>
 	<li><a href="#redis-installation">Redis</a></li>
 	<li><a href="#mongo-installation">MongoDB</a></li>
+	<li><a href="#orientdb-installation">OrientDB</a></li>
 	<li><a href="#haproxy-installation">HAProxy</a> 1.5-dev18 (<a href="http://192.168.178.4/trac/cross/ticket/4711">#4711</a>)</li>
 	<li><a href="#graphicsmagick-installation">GraphicsMagick</a> (ใช้สร้าง thumbnail ของ email attachment)</li>
 	<li><a href="#postgresql-installation">PostgreSQL</a> (ใช้เก็บ Feed)</li>
@@ -49,9 +50,10 @@ published: true
 </ol>
 <h1>การ start service ต่างๆ</h1>
 <ol>
-	<li>ถ้าเพิ่ง clone/pull มาใหม่ ต้องทำ <strong>./rebuildChat.sh</strong> เพื่อ build service ของ friendserver, router, shadow</li>
+	<li>ถ้าเพิ่ง clone/pull มาใหม่ ต้องทำ <strong>./rebuildChat.sh</strong> เพื่อ build service ของ friendserver, router, shadow, remoteCL</li>
+	<li>ไปที่ path ที่ลง OrientDB ไว้ สั่ง <strong>bin/server.sh </strong>เพื่อ start service</li>
 	<li><span style="line-height: 15px;">start dependency service โดยคำสั่ง <strong>./startAll.sh</strong> ที่ path <strong>/crossweb/tests/services</strong>
-คำสั่งนี้จะทำการ start mongod, init mail mongo, init quota, slapd, redis-server, postgres, HAProxy, IPS, LG, friendserver, router, shadow, add app info, add license info ตามลำดับ</span></li>
+คำสั่งนี้จะทำการ start mongod, init mail mongo, init quota, slapd, redis-server, postgres, HAProxy, IPS, LG, friendserver, router, shadow, remoteCL, add app info, add license info ตามลำดับ</span></li>
 	<li>start web service โดยคำสั่ง <strong>./startWebService.sh</strong> ที่ path <strong>/crossweb/tests/services</strong>
 คำสั่งนี้จะทำการ start UM, Todo, Contact, Friend, Mail-Client, Publisher และ Subscriber ตามลำดับ</li>
 </ol>
@@ -60,7 +62,8 @@ published: true
 	<li><span style="line-height: 15px;">stop web service โดยคำสั่ง <strong>./stopWebService.sh</strong> ที่ path <strong>/crossweb/tests/services</strong>
 คำสั่งนี้จะทำการ stop Subscriber, Publisher, Mail-Client, Friend, Contact, Todo และ UM ตามลำดับ</span></li>
 	<li>stop dependency service โดยคำสั่ง <strong>./stopAll.sh</strong> ที่ path <strong>/crossweb/tests/services</strong>
-คำสั่งนี้จะทำการ stop HAProxy, LG, IPS, mongod, slapd, redis-server, postgres, friendserver, router, shadow ตามลำดับ</li>
+คำสั่งนี้จะทำการ stop HAProxy, LG, IPS, mongod, slapd, redis-server, postgres, friendserver, router, shadow, remoteCL ตามลำดับ</li>
+	<li>ปิด OrientDB ด้วย signal interrupt (Ctrl-C)</li>
 </ol>
 <h1><strong>การดู status service ต่างๆ</strong></h1>
 <ul>
@@ -78,8 +81,6 @@ published: true
 </ul>
 <h1>เพิ่มเติม</h1>
 <ul>
-	<li><span style="line-height: 15px;">store ของ user ของ process RemoteCL1 จะอยู่ที่ path <strong>/crossweb/tests/services/remoteCL/storage1</strong></span></li>
-	<li>store ของ user ของ process RemoteCL2 จะอยู่ที่ path <strong>/crossweb/tests/services/remoteCL/storage2</strong></li>
 	<li>file database ของ mongodb จะอยู่ที่ path <strong>/crossweb/tests/services/mongodb</strong></li>
 	<li>log ของ service ต่างๆ จะอยู่ที่ path <strong>/crossweb/tests/services/log</strong></li>
 	<li>process id ของ service ต่างๆ จะอยู่ที่ <strong>/crossweb/tests/services/running</strong></li>
@@ -156,6 +157,18 @@ make install</code></li>
 	<li>create symbolic links to the MongoDB programs in your /usr/local/bin (ในที่นี้สมมติว่า source ที่ extract แล้ว อยู่ที่ path /Users/alice/Source<code>ln -s /Users/alice/Source/mongodb-osx-x86_64-2.6.2/bin/mongod /usr/local/bin/mongod</code></li>
 </ol>
 <p style="text-align: right;"><a href="#top-page">^ top</a></p>
+<a name=" orientdb-installation"></a>
+<h1>OrientDB Installation</h1>
+<ol>
+	<li style="text-align: left;">download <a href="http://orientdb.com/download.php?email=unknown@unknown.com&amp;file=orientdb-community-2.1.12.tar.gz&amp;os=multi">http://orientdb.com/download.php?email=unknown@unknown.com&amp;file=orientdb-community-2.1.12.tar.gz&amp;os=multi</a></li>
+	<li style="text-align: left;">extract file and place anywhere you like</li>
+	<li style="text-align: left;"><strong>cd ortientdb</strong></li>
+	<li style="text-align: left;">start service by <strong>bin/server.sh</strong>
+<ol>
+	<li style="text-align: left;">if this is the first time, OrientDB will ask for password. For the <strong>password</strong>, we use <strong>1234</strong></li>
+</ol>
+</li>
+</ol>
 <a name="haproxy-installation"></a>
 <h1>HAProxy Installation</h1>
 <ol>
