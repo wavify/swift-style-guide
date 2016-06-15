@@ -34,6 +34,7 @@ published: true
 	<li>ติดตั้ง Node Module ต่างๆ ได้แก่
 <ul>
 	<li>node module ของ crossweb ติดตั้งโดยคำสั่ง <strong>npm install</strong> ที่ path <strong>/crossweb</strong></li>
+	<li>node module ของ chat ติดตั้งโดยคำสั่ง <strong>npm install</strong> ที่ path <strong>/chat</strong></li>
 	<li>node module ของ iphone service ติดตั้งโดยคำสั่ง <strong>npm install</strong> ที่ path <strong>/iphone-service</strong></li>
 	<li>node module ของ module appinfo ติดตั้งโดยคำสั่ง <strong>npm install</strong> ที่ path <strong>/iphone-service/node_modules/appinfo</strong></li>
 	<li>หมายเหตุ
@@ -44,7 +45,6 @@ published: true
 </li>
 </ul>
 </li>
-	<li>build RemoteCL โดยคำสั่ง <strong>./build-debug.sh</strong> ที่ path <strong>/crossweb/sdk/RemoteCL</strong></li>
 	<li>เพิ่ม <strong>127.0.0.1 beta.crossflow.ws</strong> ใน hosts file (<strong>/etc/hosts</strong>)<code>sudo vi /etc/hosts</code></li>
 </ol>
 <h1>การ start service ต่างๆ</h1>
@@ -183,17 +183,15 @@ sudo make install</code></li>
 <p style="text-align: right;"> <a href="#top-page">^ top</a></p>
 <a name="postgresql-installation"></a>
 <h1>PostgreSQL Installation</h1>
-<ol>
 <code>$ curl -s "http://git.postgresql.org/gitweb/?p=2ndquadrant_bdr.git;a=blob_plain;f=scripts/bdr_quickstart.sh;hb=bdr-plugin/REL0_9_STABLE" | bash
 export PATH=$HOME/2ndquadrant_bdr/bdr/bin:$PATH
 mkdir -p /usr/local/var/postgreSQL
 initdb -D /usr/local/var/postgreSQL -A trust -U postgres
 </code>
-</ol>
+
 <a name="zmq-installation"></a>
 <h1>ZMQ Installation</h1>
-<ol>
-	<code>brew install libsodium
+<code>brew install libsodium
 curl -O http://download.zeromq.org/zeromq-4.1.3.tar.gz
 tar -zxvf zeromq-4.1.3.tar.gz
 cd zeromq-4.1.3
@@ -202,5 +200,5 @@ export sodium_CFLAGS="-I/usr/local/include"
 ./configure --with-libsodium=/usr/local/
 make &amp;&amp; make install
 </code>
-</ol>
+
 &nbsp;
