@@ -162,7 +162,7 @@ make install</code></li>
 <ol>
 	<li>download <a href="http://orientdb.com/download.php?email=unknown@unknown.com&amp;file=orientdb-community-2.1.12.tar.gz&amp;os=multi">http://orientdb.com/download.php?email=unknown@unknown.com&amp;file=orientdb-community-2.1.12.tar.gz&amp;os=multi</a></li>
 	<li>extract file and place anywhere you like</li>
-	<li><strong>cd orientdb-community-2.1.12</strong></li>
+	<li><strong>cd orientdb-community-2.1.12 </strong>(directory may different depend on the downloaded orientDB's version</li>
 	<li>start service by <strong>bin/server.sh</strong>
 <ol>
 	<li>if this is the first time, OrientDB will ask for password. For the <strong>password</strong>, we use <strong>1234</strong></li>
