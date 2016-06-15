@@ -211,7 +211,8 @@ cd zeromq-4.1.3
 export sodium_LIBS="-L/usr/local/lib/ -lsodium"
 export sodium_CFLAGS="-I/usr/local/include"
 ./configure --with-libsodium=/usr/local/
-make &amp;&amp; make install
+make
+make install
 </code>
 
 &nbsp;
