@@ -163,9 +163,8 @@ make install</code></li>
 	<li>download <a href="http://orientdb.com/download.php?email=unknown@unknown.com&amp;file=orientdb-community-2.1.12.tar.gz&amp;os=multi">http://orientdb.com/download.php?email=unknown@unknown.com&amp;file=orientdb-community-2.1.12.tar.gz&amp;os=multi</a></li>
 	<li>extract file and place anywhere you like</li>
 	<li>cd orientdb-community-2.1.12</li>
-	<li>export ORIENTDB_HOME=`pwd`</li>
-	<li>ln -s $ORIENTDB_HOME/bin/server.sh /usr/local/bin/orientdb</li>
-	<li>copy file from <strong>crossweb/tests/services/orientdb-server-config.xml</strong> to <strong>$ORIENTDB_HOME/config/</strong>
+	<li>ln -s $PWD/bin/server.sh /usr/local/bin/orientdb</li>
+	<li>copy file from <strong>crossweb/tests/services/orientdb-server-config.xml</strong> to <strong>$PWD/config/</strong>
 <code>cp path-to-crossproject/crossweb/tests/services/orientdb-server-config.xml $ORIENTDB_HOME/config/
 </code>
 </li>
