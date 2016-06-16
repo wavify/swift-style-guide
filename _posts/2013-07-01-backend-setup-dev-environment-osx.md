@@ -75,20 +75,17 @@ download file from<strong> <em>ftp://192.168.178.10/platform/base_sources/10.2-R
 </li>
 	<li>Run script buildRemoteCl.sh &lt;path_crossproject&gt;
 <ol>
-	<li><strong>./buildRemoteCl.sh</strong> crossproject</li>
+	<li><strong>./buildRemoteCl.sh crossproject</strong></li>
 </ol>
 </li>
 	<li>Run script npmInstall.sh &lt;path_crosspject&gt;
 <ol>
-	<li><strong>./npmInstall.sh</strong> crossproject</li>
+	<li><strong>./npmInstall.sh crossproject</strong></li>
 </ol>
 </li>
-	<li>DO share this folder to acccess
+	<li>Run script <strong>installSamba.sh </strong>&lt;path_crosspject&gt; ที่ <strong>path crossmail/test</strong>
 <ol>
-	<li>Install<strong> samba</strong></li>
-	<li>Copy <strong>smb4.conf</strong> to <strong>/usr/local/etc/</strong></li>
-	<li>Run add user's smb password ( <strong>smbpasswd -a opal</strong> )</li>
-	<li>Test run (<strong> smbclient -L localhost -U opal</strong> )</li>
+	<li><strong>./installSamba.sh crossproject</strong></li>
 </ol>
 </li>
 	<li>Go to your machine from your windows or other \\x.x.x.x</li>
