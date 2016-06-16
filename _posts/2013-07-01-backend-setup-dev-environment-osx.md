@@ -51,7 +51,6 @@ published: true
 <h1>การ start service ต่างๆ</h1>
 <ol>
 	<li>ถ้าเพิ่ง clone/pull มาใหม่ ต้องทำ <strong>./rebuildChat.sh</strong> เพื่อ build service ของ friendserver, router, shadow, remoteCL</li>
-	<li>ไปที่ path ที่ลง OrientDB ไว้ สั่ง <strong>bin/server.sh </strong>เพื่อ start service</li>
 	<li><span style="line-height: 15px;">start dependency service โดยคำสั่ง <strong>./startAll.sh</strong> ที่ path <strong>/crossweb/tests/services</strong>
 คำสั่งนี้จะทำการ start mongod, init mail mongo, init quota, slapd, redis-server, postgres, HAProxy, IPS, LG, friendserver, router, shadow, remoteCL, add app info, add license info ตามลำดับ</span></li>
 	<li>start web service โดยคำสั่ง <strong>./startWebService.sh</strong> ที่ path <strong>/crossweb/tests/services</strong>
