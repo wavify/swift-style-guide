@@ -83,7 +83,7 @@ download file from<strong> <em>ftp://192.168.178.10/platform/base_sources/10.2-R
 	<li><strong>./npmInstall.sh crossproject</strong></li>
 </ol>
 </li>
-	<li>Run script <strong>installSamba.sh </strong>&lt;path_crosspject&gt; ที่ <strong>path crossmail/test</strong>
+	<li>Run script <strong>installSamba.sh </strong>&lt;path_crosspject&gt; ที่ path <strong>crossmail/test</strong>
 <ol>
 	<li><strong>./installSamba.sh crossproject</strong></li>
 </ol>
