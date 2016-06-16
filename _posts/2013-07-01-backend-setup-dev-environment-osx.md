@@ -48,6 +48,51 @@ published: true
 </li>
 	<li>เพิ่ม <strong>127.0.0.1 beta.crossflow.ws</strong> ใน hosts file (<strong>/etc/hosts</strong>)<code>sudo vi /etc/hosts</code></li>
 </ol>
+<h1>การ setup บนเครื่อง Freebsd หรือเครื่อง Cross</h1>
+<ol>
+	<li>Require default kernel with uname (FreeBSD)
+<ol>
+	<li>copy file from <strong>10.10.5.159/10.10.5.160</strong> and extract to <strong>/boot/kernel/</strong>
+or fetch file from here <em><strong>ftp://192.168.178.10/platform/base_sources/10.2-RELEASE/kernel.GENERIC.tgz</strong></em></li>
+	<li><strong>mv /boot/kernel /boot/kernel.bak</strong></li>
+	<li><strong>tar xzvf kernel.GENERIC.tgz -C /</strong></li>
+	<li>after extract the restart your server</li>
+</ol>
+</li>
+	<li>This folder is require /usr/include , go to fetch and extract to your machine
+download file from<strong> <em>ftp://192.168.178.10/platform/base_sources/10.2-RELEASE/include.tar.gz</em></strong> and extract to user machine
+<ol>
+	<li><strong>tar xzvf include.tar.gz -C /</strong></li>
+</ol>
+</li>
+	<li>run
+<ol>
+	<li><strong>ln -snf /conf/pkg /var/db</strong></li>
+	<li><strong>pkg install gmake</strong></li>
+	<li><strong>pkg install cmake</strong></li>
+	<li><strong>pkg install pkgconf</strong></li>
+</ol>
+</li>
+	<li>Run script buildRemoteCl.sh &lt;path_crossproject&gt;
+<ol>
+	<li><strong>./buildRemoteCl.sh</strong> crossproject</li>
+</ol>
+</li>
+	<li>Run script npmInstall.sh &lt;path_crosspject&gt;
+<ol>
+	<li><strong>./npmInstall.sh</strong> crossproject</li>
+</ol>
+</li>
+	<li>DO share this folder to acccess
+<ol>
+	<li>Install<strong> samba</strong></li>
+	<li>Copy <strong>smb4.conf</strong> to <strong>/usr/local/etc/</strong></li>
+	<li>Run add user's smb password ( <strong>smbpasswd -a opal</strong> )</li>
+	<li>Test run (<strong> smbclient -L localhost -U opal</strong> )</li>
+</ol>
+</li>
+	<li>Go to your machine from your windows or other \\x.x.x.x</li>
+</ol>
 <h1>การ start service ต่างๆ</h1>
 <ol>
 	<li>ถ้าเพิ่ง clone/pull มาใหม่ ต้องทำ <strong>./rebuildChat.sh</strong> เพื่อ build service ของ friendserver, router, shadow, remoteCL</li>
