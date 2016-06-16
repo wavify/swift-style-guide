@@ -162,14 +162,11 @@ make install</code></li>
 <ol>
 	<li>download <a href="http://orientdb.com/download.php?email=unknown@unknown.com&amp;file=orientdb-community-2.1.12.tar.gz&amp;os=multi">http://orientdb.com/download.php?email=unknown@unknown.com&amp;file=orientdb-community-2.1.12.tar.gz&amp;os=multi</a></li>
 	<li>extract file and place anywhere you like</li>
-	<li>cd orientdb-community-2.1.12</li>
-	<li>ln -s $PWD/bin/server.sh /usr/local/bin/orientdb</li>
-	<li>copy file from <strong>crossweb/tests/services/orientdb-server-config.xml</strong> to <strong>$PWD/config/</strong>
-<code>cp path-to-crossproject/crossweb/tests/services/orientdb-server-config.xml $PWD/config/
-</code>
-</li>
-</ol>
-</li>
+	<li><strong>cd orientdb-community-2.1.12</strong></li>
+	<li><strong>ln -s $PWD/bin/server.sh /usr/local/bin/orientdb</strong></li>
+	<li>copy OrientDB config file
+<code><strong>cp path-to-crossproject/crossweb/tests/services/orientdb-server-config.xml $PWD/config/</strong>
+</code></li>
 </ol>
 <a name="haproxy-installation"></a>
 <h1>HAProxy Installation</h1>
