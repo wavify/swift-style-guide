@@ -165,7 +165,7 @@ make install</code></li>
 	<li>cd orientdb-community-2.1.12</li>
 	<li>ln -s $PWD/bin/server.sh /usr/local/bin/orientdb</li>
 	<li>copy file from <strong>crossweb/tests/services/orientdb-server-config.xml</strong> to <strong>$PWD/config/</strong>
-<code>cp path-to-crossproject/crossweb/tests/services/orientdb-server-config.xml $ORIENTDB_HOME/config/
+<code>cp path-to-crossproject/crossweb/tests/services/orientdb-server-config.xml $PWD/config/
 </code>
 </li>
 </ol>
