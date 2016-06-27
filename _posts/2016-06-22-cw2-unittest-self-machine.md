@@ -8,65 +8,88 @@ layout: post
 permalink: http://192.168.178.12/?p=5397
 published: true
 ---
-Backend required:
-<a href="http://192.168.178.12/?p=5207">http://192.168.178.12/?p=5207</a>
-cmake
-hiredis
-curl
-sqlite
-jansson
-ZMQ + libsodium
-<a href="http://192.168.178.12/?p=4869">http://192.168.178.12/?p=4869</a>
-Xcode 7.3.1
-Command Line Tools
-BerkeleyDB
-OpenLDAP
-Redis
-OrientDB
-PostgreSQL
+<strong>Backend required</strong>
+<ol>
+	<li><a href="http://192.168.178.12/?p=5207">http://192.168.178.12/?p=5207</a>
+<ul>
+	<li>cmake</li>
+	<li>hiredis</li>
+	<li>curl</li>
+	<li>sqlite</li>
+	<li>jansson</li>
+	<li>ZMQ + libsodium</li>
+</ul>
+</li>
+	<li><a href="http://192.168.178.12/?p=4869">http://192.168.178.12/?p=4869</a>
+<ul>
+	<li>Xcode 7.3.1</li>
+	<li>Command Line Tools</li>
+	<li>BerkeleyDB</li>
+	<li>OpenLDAP</li>
+	<li>Redis</li>
+	<li>OrientDB</li>
+	<li>PostgreSQL</li>
+</ul>
+</li>
+</ol>
+<strong>Config Service</strong>
+<ul>
+	<li>OrientDB</li>
+	<li>set root password to "1234"
+<ol>
+	<li>open config file "orientdb-server-config.xml"</li>
+	<li>edit line <span style="font-family: Monaco, Consolas, 'Andale Mono', 'DejaVu Sans Mono', monospace; font-size: 13px; font-style: normal; font-weight: normal; line-height: normal;">&lt;user resources="*" password="" name="root"/&gt; </span>to <span style="font-family: Monaco, Consolas, 'Andale Mono', 'DejaVu Sans Mono', monospace; font-size: 13px; font-style: normal; font-weight: normal; line-height: normal;">&lt;user resources="*" password="1234" name="root"/&gt;</span></li>
+</ol>
+</li>
+</ul>
+<strong>Step การรัน</strong>
+<ol>
+	<li>ไม่ต้องเปิด service ของ cw2</li>
+	<li>cd crossproject/cw2/scripts</li>
+	<li>./testCW2.sh -orientp "1234"
+<ul>
+<ul>
+	<li> Requirements</li>
+	<li>[service] orientdb (Datamodel, Friend, Chat)</li>
+</ul>
+</ul>
+จำเป็นต้อง start OrientDB และต้องระบุ option -orientp "1234" ตามหลัง./testCW2.sh -orientp "1234"
+./testCW2.sh datamodel -orientp “1234”
+<ul>
+	<li>[service] cassandra (Transport)</li>
+	<li>[service] ldap (Friend)</li>
+</ul>
+</li>
+	<li>ต้องการ test service ไหนให้ระบุ ตามหลัง เช่น "./testCW2.sh datamodel" โดย service ที่มีได้แก่ cw2, cwmq, transport, datamodel, friend, chat
+<ul>
+	<li>Unit Test CWMQ ( cw2/shared/cwmq/ )</li>
+	<li>Unit Test Transport ( cw2/transportlayer )</li>
+	<li>Unit Test Datamodel ( cw2/datamodel )</li>
+	<li>Unit Test Friend ( cw2/CWFriendlist )</li>
+	<li>Unit Test Chat ( cw2/RemoteChat )</li>
+	<li>ถ้าไม่ระบุ service ใดๆจะรันทั้งหมด</li>
+</ul>
+</li>
+	<li>ไม่ต้องการ run service เพียงบาง service ให้ระบุ -d
+./testCW2.sh -d cw2 -d friend</li>
+	<li>ถ้าต้องการ run transport โดยใช้ cassandra ใส่ --cassandra จะเป็นการใช้ database เดียวกับเครื่อง production (จำเป็นต้องลง cassandra) แต่ถ้าไม่ระบุ default จะใช้ sqlite</li>
+	<li>./testCW2.sh --help เพื่อดูตัวอย่าง</li>
+	<li>ต้อง Build cw2 ก่อนอย่างน้อย 1 เครื่องจึงจะสามารถรันเทสอื่นๆได้</li>
+</ol>
+<strong>Successfully Example Result</strong>
+<code>return 0
+All passed</code>
 
-Config Service
-OrientDB
-1. set root password to "1234"
-5.1 open config file "orientdb-server-config.xml"
-5.2 edit line to
-
-Step การรัน
-1. ไม่ต้องเปิด service ของ cw2
-2. cd crossproject/cw2/scripts
-3. ./testCW2.sh -orientp "1234"
-- Requirements
-- [service] orientdb (Datamodel, Friend, Chat)
-จำเป็นต้อง start OrientDB และต้องระบุ option -orientp "1234" ตามหลัง
-./testCW2.sh datamodel -orientp "1234"
-- [service] cassandra (Transport)
-- [service] ldap with data org throughwave.co.th (Friend)
-- ต้องการ test service ไหนให้ระบุ ตามหลัง เช่น "./testCW2.sh datamodel" โดย service ที่มีได้แก่ cw2, cwmq, transport, datamodel, friend, chat
-- Unit Test CWMQ ( cw2/shared/cwmq/ )
-- Unit Test Transport ( cw2/transportlayer )
-- Unit Test Datamodel ( cw2/datamodel )
-- Unit Test Friend ( cw2/CWFriendlist )
-- Unit Test Chat ( cw2/RemoteChat )
-- ถ้าไม่ระบุ service ใดๆจะรันทั้งหมด
-- ไม่ต้องการ run service เพียงบาง service ให้ระบุ -d
-./testCW2.sh -d cw2 -d friend
-- ถ้าต้องการ run transport โดยใช้ cassandra ใส่ --cassandra จะเป็นการใช้ database เดียวกับเครื่อง production (จำเป็นต้องลง cassandra) แต่ถ้าไม่ระบุ default จะใช้ sqlite
-- ./testCW2.sh --help เพื่อดูตัวอย่าง
-- ต้อง Build cw2 ก่อนอย่างน้อย 1 เครื่องจึงจะสามารถรันเทสอื่นๆได้
-
-Successfully Example Result
-return 0
-All passed
-
-Error
-limit open file descriptor ไม่พอ
-Message
-Error: Can't create table 'user' in './46574400-0000-0000-0000-000000000000-5599.db' dbFile (14): unable to open database file
+<strong>Error</strong>
+<ol>
+	<li>limit open file descriptor ไม่พอ
+<code>Error: Can't create table 'user' in './46574400-0000-0000-0000-000000000000-5599.db' dbFile (14): unable to open database file
 Bad file descriptor (src/signaler.cpp:155)
 test_funcs.sh: line 114: 9535 Abort trap: 6 ./allTest.o
 /Users/abc/crossproject/cw2/scripts
 WARNING: Your file descriptor maybe not enough to run this test.
 Type './testCW2.sh --help' for more detail.
-Build / Test TransportLayer failed.
+Build / Test TransportLayer failed.</code>
 วิธีแก้
-ulimit -n 1024
+<code>ulimit -n 1024</code></li>
+</ol>
