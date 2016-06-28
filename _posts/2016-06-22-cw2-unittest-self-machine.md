@@ -46,18 +46,21 @@ published: true
 <ol>
 	<li>ไม่ต้องเปิด service ของ cw2</li>
 	<li>cd crossproject/cw2/scripts</li>
-	<li>./testCW2.sh -orientp "1234"
+	<li>./testCW2.sh -orientpass "1opal;" -ldapport "8389"
 <ul>
 <ul>
 	<li> Requirements</li>
 	<li>[service] orientdb (Datamodel, Friend, Chat)</li>
 </ul>
 </ul>
-จำเป็นต้อง start OrientDB และต้องระบุ option -orientp "1234" ตามหลัง./testCW2.sh -orientp "1234"
-./testCW2.sh datamodel -orientp “1234”
+จำเป็นต้อง start OrientDB และต้องระบุ option -orientpass "xxxx" ตามหลัง./testCW2.sh ถ้าหาก password ของ OrientDB ที่เปิดไม่ใช่ "1234" (Default)
+./testCW2.sh datamodel -orientpass “1opal;”
 <ul>
 	<li>[service] cassandra (Transport)</li>
-	<li>[service] ldap (Friend)</li>
+	<li>[service] ldap (Friend)
+
+จำเป็นต้อง start ldap และต้องระบุ option -ldapport "xxxx" ตามหลัง./testCW2.sh ถ้าหาก password ของ ldap ที่เปิดไม่ใช่ "389" (Default)
+./testCW2.sh friend -orientpass “1opal;” -ldapport "8389"</li>
 </ul>
 </li>
 	<li>ต้องการ test service ไหนให้ระบุ ตามหลัง เช่น "./testCW2.sh datamodel" โดย service ที่มีได้แก่ cw2, cwmq, transport, datamodel, friend, chat
