@@ -23,7 +23,7 @@ export sodium_CFLAGS="-I/usr/local/include"
 make &amp;&amp; make install</pre>
 </li>
 	<li>openldap and berkeley-db (installation guide in <a href="http://192.168.178.12/?p=4869">http://192.168.178.12/?p=4869</a>)</li>
-	<li>Download orient-db (download from here <a href="http://orientdb.com/download.php?email=unknown@unknown.com&amp;file=orientdb-community-2.1.12.tar.gz&amp;os=multi">Orient-db</a>)</li>
+	<li>Download orient-db (<a href="http://orientdb.com/download.php?email=unknown@unknown.com&amp;file=orientdb-community-2.1.12.tar.gz&amp;os=multi">download</a>)</li>
 </ol>
 ถ้า brew Permissions Denied  แก้ตามนี้
 <pre>~ $ sudo chown -R `whoami` /usr/local
@@ -32,7 +32,7 @@ Password:
 Linking /usr/local/Cellar/node/0.10.4... 5 symlinks created</pre>
 &nbsp;
 
-<strong>Installation (for first time only or after pull from git repo)</strong>
+<strong>Installation</strong>
 <ol>
 	<li>Clone project from http://192.168.178.4/git/chat
 *If you use git command line, you need to use
@@ -43,13 +43,17 @@ Linking /usr/local/Cellar/node/0.10.4... 5 symlinks created</pre>
 *If you use git command line, you need to use
 <pre>git submodule update --init --recursive</pre>
 </li>
-	<li>Build chat project backend
-<pre>cd crossweb/tests/services
-./rebuildChat.sh
-
-ถ้าไม่ผ่าน ให้ใช้คำสั่ง xcode-select --install ก่อน แล้ว ./rebuildChat.sh อีกรอบ</pre>
+	<li>Install node modules (<em>crossweb/chat</em>)
+<pre>cd crossweb/chat
+npm install</pre>
 </li>
-	<li>Config chat UI path
+	<li>Build chat project backend (<em>crossweb/chat/scripts</em>)
+<pre>cd scripts
+./build.sh
+
+ถ้าไม่ผ่าน ให้ใช้คำสั่ง xcode-select --install ก่อน แล้ว ./build.sh อีกรอบ</pre>
+</li>
+	<li>Config chat UI path (<em>crossweb/chat/server</em>)
 <pre>ไปที่ repo chat ที่ clone มา
 cd public
 pwd แล้ว copy path ที่ได้</pre>
@@ -60,74 +64,45 @@ vim config-default.js
 ให้เป็น webClient: 'path ที่ copy มา',
 **** เก็บไว้เป็น config ของตัวเอง ไม่ต้อง push ขึ้น repo ****</pre>
 </li>
-	<li>run orient-db
-<pre>go to orient-db folder
+</ol>
+
+<hr />
+
+<strong>Start Services</strong>
+<ol>
+	<li>start LDAP
+<pre>./start-ldap.sh</pre>
+</li>
+	<li>start OrientDB
+<pre>go to OrientDB folder
 bin/server.sh</pre>
 </li>
-	<li>start authentication ldap
-<pre>cd script
-./start-authen.sh</pre>
-</li>
-	<li>add user to database (optional): use at first time or want to reset database
-<pre>cd script
-./adduser.sh</pre>
+	<li>start chat service (<em>crossweb/chat/scripts</em>)
+<pre>cd crossweb/chat/scripts
+./start.sh</pre>
 </li>
 </ol>
-<strong>Run Chat after install</strong>
+&nbsp;
+
+<hr />
+
+<strong>Stop Services</strong>
 <ol>
-	<li>start chat service
-<pre>cd script
-./start-all.sh</pre>
+	<li>stop LDAP
+<pre>./stop-ldap.sh</pre>
 </li>
-</ol>
-<strong>Run Chat after turn on computer</strong>
-<ol>
-	<li>run orient-db
-<pre>go to orient-db folder
-bin/server.sh</pre>
+	<li>stop OrientDB
+<pre>go to terminal that use to start OrientDB
+interrupt (CTRL-C)</pre>
 </li>
-	<li>start authentication ldap
-<pre>cd script
-./start-authen.sh</pre>
-</li>
-	<li>start chat service
-<pre>cd script
-./start-all.sh</pre>
+	<li>stop chat service (<em>crossweb/chat/scripts</em>)
+<pre>cd crossweb/chat/scripts
+./stop.sh</pre>
 </li>
 </ol>
 
 <hr />
 
-&nbsp;
-
-<strong>Reset Chat</strong>
-<ol>
-	<li>reset server database
-<pre>cd script
-./reset-all.sh</pre>
-</li>
-	<li>clear cookie in browser</li>
-	<li>login again</li>
-</ol>
-<strong>Clean and Adduser Authentication</strong>
-<ol>
-	<li>stop authen
-<pre>cd script
-./stop-authen.sh</pre>
-</li>
-	<li>remove database
-<pre>cd script
-./removeuser.sh</pre>
-</li>
-	<li>start authen
-<pre>cd script
-./start-authen.sh</pre>
-</li>
-	<li>add user to database
-<pre>cd script
-./adduser.sh</pre>
-</li>
-</ol>
 <strong>Useful script</strong>
 <ul>
 	<li>./status.sh - check the status of all service</li>
@@ -145,7 +120,7 @@ bin/server.sh</pre>
 </ul>
 <strong>GUI for ldap</strong>
 <ul>
-	<li>download <a href="https://directory.apache.org/apacheds/download/download-macosx.html">Apache Directory Studio</a> and Install then launch</li>
+	<li>download <a href="https://directory.apache.org/studio/download/download-macosx.html">Apache Directory Studio</a> and Install then launch</li>
 	<li>File -&gt; new -&gt; LDAP Browser -&gt; LDAP Connection</li>
 	<li>Hostname: <span style="text-decoration: underline;">localhost</span> -&gt; next</li>
 	<li>Bind DN or user: <span style="text-decoration: underline;">cn=admin,dc=authen</span></li>
