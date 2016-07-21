@@ -106,17 +106,8 @@ interrupt (CTRL-C)</pre>
 <strong>Useful script</strong>
 <ul>
 	<li>./status.sh - check the status of all service</li>
-	<li>./start-all.sh - start all service</li>
-	<li>./stop-all.sh - stop all service</li>
-	<li>./reset-all.sh - reset all service, clear database and start service again</li>
-</ul>
-<strong>How to access log</strong>
-<ul>
-	<li>friend service log &gt;&gt; /tmp/chat_log/friendservice.log</li>
-	<li>friend-node log &gt;&gt; /tmp/chat_log/friendNode.log</li>
-	<li>router log &gt;&gt; /tmp/chat_log/router.log</li>
-	<li>hwserver log &gt;&gt;/tmp/chat_log/hwserver.log</li>
-	<li>chat-node log &gt;&gt;/tmp/chat_log/chat-node.log</li>
+	<li>./start.sh - start all service</li>
+	<li>./stop.sh - stop all service</li>
 </ul>
 <strong>GUI for ldap</strong>
 <ul>
@@ -125,4 +116,10 @@ interrupt (CTRL-C)</pre>
 	<li>Hostname: <span style="text-decoration: underline;">localhost</span> -&gt; next</li>
 	<li>Bind DN or user: <span style="text-decoration: underline;">cn=admin,dc=authen</span></li>
 	<li>Bind password: <span style="text-decoration: underline;">secret</span> -&gt; Finish</li>
+</ul>
+<strong>Force Auto AddFriend</strong>
+
+<strong>Force Logout</strong>
+<ul>
+	<li>If cannot logout from chat, you need to clear cookie of this website</li>
 </ul>
