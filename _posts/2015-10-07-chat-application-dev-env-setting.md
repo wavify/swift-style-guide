@@ -53,6 +53,10 @@ npm install</pre>
 
 ถ้าไม่ผ่าน ให้ใช้คำสั่ง xcode-select --install ก่อน แล้ว ./build.sh อีกรอบ</pre>
 </li>
+	<li>Add User to LDAP (<em>crossweb/chat/scripts</em>)
+<pre>./start-ldap.sh
+./adduser.sh</pre>
+</li>
 	<li>Config chat UI path (<em>crossweb/chat/server</em>)
 <pre>ไปที่ repo chat ที่ clone มา
 cd public
@@ -110,15 +114,29 @@ interrupt (CTRL-C)</pre>
 	<li>./stop.sh - stop all service</li>
 </ul>
 <strong>GUI for ldap</strong>
-<ul>
+<ol>
 	<li>download <a href="https://directory.apache.org/studio/download/download-macosx.html">Apache Directory Studio</a> and Install then launch</li>
 	<li>File -&gt; new -&gt; LDAP Browser -&gt; LDAP Connection</li>
 	<li>Hostname: <span style="text-decoration: underline;">localhost</span> -&gt; next</li>
-	<li>Bind DN or user: <span style="text-decoration: underline;">cn=admin,dc=authen</span></li>
+	<li>Bind DN or user: <span style="text-decoration: underline;">cn=manager,dc=crossflow.us</span></li>
 	<li>Bind password: <span style="text-decoration: underline;">secret</span> -&gt; Finish</li>
-</ul>
+</ol>
+<strong>Remove All User from LDAP</strong>
+<ol>
+	<li>./stop-ldap.sh</li>
+	<li>./removeuser.sh</li>
+	<li>./start-ldap.sh</li>
+</ol>
 <strong>Force Auto AddFriend</strong>
-
+<ol>
+	<li>start LDAP (ถ้ายังไม่ได้ start</li>
+	<li>เปิดโปรแกรม Apapche Directory Studio</li>
+	<li>ไป DIT -&gt; Root DSE -&gt; dc=crossflow.us -&gt; dc=dep1 -&gt; ou=com -&gt; ou-cw2test
+(ตามรูปที่มีการ highlight สีน้ำเงิน)</li>
+	<li>กด New Attribute... (ตามรูปที่มีวงกลมสีแดง)</li>
+	<li>ช่อง Attribute type ให้เลือก allBeFriends แล้วกด Finish</li>
+	<li>จะมี Attribute ชื่อ allBeFriends เพิ่มขึ้นมา ให้ใส่ค่า TRUE (ตามรูปที่มีการวงสีเขียว)</li>
+</ol>
 <strong>Force Logout</strong>
 <ul>
 	<li>If cannot logout from chat, you need to clear cookie of this website</li>
