@@ -137,6 +137,8 @@ interrupt (CTRL-C)</pre>
 	<li>ช่อง Attribute type ให้เลือก allBeFriends แล้วกด Finish</li>
 	<li>จะมี Attribute ชื่อ allBeFriends เพิ่มขึ้นมา ให้ใส่ค่า TRUE (ตามรูปที่มีการวงสีเขียว)</li>
 </ol>
+<strong><img class="wp-image-5431 size-full aligncenter" src="http://192.168.178.12/wp-content/uploads/2015/10/acb.png" alt="acb" width="951" height="708" /></strong>
+
 <strong>Force Logout</strong>
 <ul>
 	<li>If cannot logout from chat, you need to clear cookie of this website</li>
