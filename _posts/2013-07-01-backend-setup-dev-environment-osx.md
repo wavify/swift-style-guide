@@ -231,8 +231,7 @@ make install</code></li>
 <p style="text-align: right;"> <a href="#top-page">^ top</a></p>
 <a name="postgresql-installation"></a>
 <h1>PostgreSQL Installation</h1>
-<code>$ curl -s "http://git.postgresql.org/gitweb/?p=2ndquadrant_bdr.git;a=blob_plain;f=scripts/bdr_quickstart.sh;hb=bdr-plugin/REL0_9_STABLE" | bash
-export PATH=$HOME/2ndquadrant_bdr/bdr/bin:$PATH
+<code>brew install postgresql
 mkdir -p /usr/local/var/postgreSQL
 initdb -D /usr/local/var/postgreSQL -A trust -U postgres
 </code>
