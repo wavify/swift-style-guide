@@ -35,7 +35,7 @@ published: true
  	<li>ติดตั้ง Node Module ต่างๆ ได้แก่
 <ul>
  	<li>node module ของ crossweb ติดตั้งโดยคำสั่ง <strong>npm install</strong> ที่ path <strong>/crossweb</strong></li>
- 	<li>node module ของ chat ติดตั้งโดยคำสั่ง <strong>npm install</strong> ที่ path <strong>/chat</strong></li>
+ 	<li>node module ของ chat ติดตั้งโดยคำสั่ง <strong>npm install</strong> ที่ path <strong>/crossweb/chat</strong></li>
  	<li>node module ของ iphone service ติดตั้งโดยคำสั่ง <strong>npm install</strong> ที่ path <strong>/iphone-service</strong></li>
  	<li>node module ของ module appinfo ติดตั้งโดยคำสั่ง <strong>npm install</strong> ที่ path <strong>/iphone-service/node_modules/appinfo</strong></li>
  	<li>หมายเหตุ
