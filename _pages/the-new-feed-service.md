@@ -13,7 +13,8 @@ published: true
 	<li><strong>Install PostgresQL with BDR extension</strong></li>
 </ul>
 <ol>
-	<li>รันคำสั่ง curl -s "http://git.postgresql.org/gitweb/?p=2ndquadrant_bdr.git;a=blob_plain;f=scripts/bdr_quickstart.sh;hb=bdr-plugin/REL0_9_STABLE" | bash</li>
+	<li><del datetime="2016-09-13T09:42:53+00:00">รันคำสั่ง curl -s "http://git.postgresql.org/gitweb/?p=2ndquadrant_bdr.git;a=blob_plain;f=scripts/bdr_quickstart.sh;hb=bdr-plugin/REL0_9_STABLE" | bash</del></li>
+	<li>รันคำสั่ง curl -s "https://raw.githubusercontent.com/2ndQuadrant/bdr/bdr-plugin/REL1_0_STABLE/scripts/bdr_quickstart.sh" | bash </li>
 	<li>แก้ไฟล์ $HOME/.profile โดยเพิ่ม export PATH=$HOME/2ndquadrant_bdr/bdr/bin:$PATH</li>
 </ol>
 <ul>
