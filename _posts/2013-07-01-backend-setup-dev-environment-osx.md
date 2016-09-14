@@ -231,11 +231,10 @@ make install</code></li>
 <p style="text-align: right;"> <a href="#top-page">^ top</a></p>
 <a name="postgresql-installation"></a>
 <h1>PostgreSQL Installation</h1>
-<code>brew install postgresql
-mkdir -p /usr/local/var/postgreSQL
-initdb -D /usr/local/var/postgreSQL -A trust -U postgres
-</code>
-
+<ol>
+ 	<li>รันคำสั่ง curl -s "https://raw.githubusercontent.com/2ndQuadrant/bdr/bdr-plugin/REL1_0_STABLE/scripts/bdr_quickstart.sh" | bash</li>
+ 	<li>แก้ไฟล์ $HOME/.profile โดยเพิ่ม export PATH=$HOME/2ndquadrant_bdr/bdr/bin:$PATH</li>
+</ol>
 <a name="zmq-installation"></a>
 <h1>ZMQ Installation</h1>
 <code>brew install libsodium
